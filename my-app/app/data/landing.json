@@ -1,0 +1,725 @@
+{
+  "hero": {
+    "sectionId": "home",
+    "topBar": {
+      "sectionCode": "ARCHITECTURAL & CIVIL SHOWCASE",
+      "tagline": "DESIGN • BUILD • ENGINEER",
+      "coordinates": "NEW YORK • AUSTIN • SEATTLE",
+      "certificationBadge": "ISO 9001 • LEED PLATINUM"
+    },
+    "primaryCta": {
+      "label": "Start Your Project",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View All Projects",
+      "href": "#project"
+    },
+    "sliderControls": {
+      "prevAria": "Previous slide",
+      "nextAria": "Next slide",
+      "galleryLabel": "LIVE SITE GALLERY"
+    },
+    "slides": [
+      {
+        "id": "skyline-tower",
+        "tag": "COMMERCIAL HIGH-RISE • MANHATTAN, NY",
+        "titlePrefix": "The Meridian",
+        "titleAccent": "Glass & Steel",
+        "titleSuffix": "Skyscraper.",
+        "shortDesc": "64-story LEED Platinum financial landmark engineered with a diagrid structural steel exoskeleton.",
+        "location": "New York, NY",
+        "area": "1.4M Sq. Ft.",
+        "year": "2025",
+        "mainImage": "/assets/images/hero-1.webp",
+        "detailImage": "/assets/images/commercial.webp"
+      },
+      {
+        "id": "solstice-villa",
+        "tag": "LUXURY ARCHITECTURE • BIG SUR, CA",
+        "titlePrefix": "Solstice Cliffside",
+        "titleAccent": "Cantilevered",
+        "titleSuffix": "Sanctuary.",
+        "shortDesc": "Architectural board-formed concrete and structural glass villa anchored 45 feet into coastal granite.",
+        "location": "Big Sur, CA",
+        "area": "28,500 Sq. Ft.",
+        "year": "2026",
+        "mainImage": "/assets/images/hero-2.webp",
+        "detailImage": "/assets/images/residential.webp"
+      },
+      {
+        "id": "cascadia-bridge",
+        "tag": "CIVIL INFRASTRUCTURE • SEATTLE, WA",
+        "titlePrefix": "Cascadia Seismic",
+        "titleAccent": "Suspension",
+        "titleSuffix": "Crossing.",
+        "shortDesc": "Multi-modal cable-stayed transit corridor engineered for 100-year seismic resilience.",
+        "location": "Seattle, WA",
+        "area": "2.8 Mile Span",
+        "year": "2025",
+        "mainImage": "/assets/images/hero-3.webp",
+        "detailImage": "/assets/images/bridge.webp"
+      },
+      {
+        "id": "alpine-estate",
+        "tag": "ALPINE COMPOUND • ASPEN, CO",
+        "titlePrefix": "Kestrel Ridge",
+        "titleAccent": "Mountain",
+        "titleSuffix": "Pavilion.",
+        "shortDesc": "High-altitude Valser quartzite, mass timber, and heated structural glass estate at 9,400 ft.",
+        "location": "Aspen, CO",
+        "area": "19,200 Sq. Ft.",
+        "year": "2025",
+        "mainImage": "/assets/images/hero-4.webp",
+        "detailImage": "/assets/images/renovation.webp"
+      }
+    ],
+    "stats": [
+      {
+        "value": "25+",
+        "label": "Years Experience",
+        "image": "/assets/images/bim-engineers.webp"
+      },
+      {
+        "value": "480+",
+        "label": "Landmarks Built",
+        "image": "/assets/images/commercial.webp"
+      },
+      {
+        "value": "$3.4B",
+        "label": "Project Volume",
+        "image": "/assets/images/bridge-span.webp"
+      },
+      {
+        "value": "100%",
+        "label": "Safety Record",
+        "image": "/assets/images/industrial.webp"
+      }
+    ]
+  },
+  "about": {
+    "sectionId": "about",
+    "eyebrow": "ABOUT APEXBUILD",
+    "heading": {
+      "prefix": "Shaping Skylines With",
+      "accent": "Precision",
+      "suffix": "& Vision."
+    },
+    "intro": "25+ years of structural mastery across commercial towers, civil bridges, and custom architectural estates.",
+    "gallery": [
+      {
+        "src": "/assets/images/bim-engineers.webp",
+        "alt": "Site engineers inspecting steel structure",
+        "caption": "5D BIM Digital Twin"
+      },
+      {
+        "src": "/assets/images/hero-1.webp",
+        "alt": "High-rise crane operations at sunrise",
+        "caption": "450+ In-House Trades"
+      },
+      {
+        "src": "/assets/images/hero-2.webp",
+        "alt": "Finished architectural concrete villa",
+        "caption": "Museum-Grade Craft"
+      },
+      {
+        "src": "/assets/images/datacenter.webp",
+        "alt": "Precision industrial engineering",
+        "caption": "LEED Platinum Standard"
+      }
+    ],
+    "experienceBadge": {
+      "value": "25+",
+      "label": "Years of Excellence",
+      "subtext": "Top 15 ENR National Contractor"
+    },
+    "pillars": [
+      {
+        "id": "philosophy",
+        "label": "5D BIM Precision",
+        "title": "Digital Twins Before Groundbreaking",
+        "description": "Every beam and curtain wall is simulated in 5D BIM to guarantee zero clashes and locked budgets.",
+        "image": "/assets/images/hero-3.webp",
+        "metrics": [
+          { "label": "BIM Clash Accuracy", "value": 99 },
+          { "label": "On-Budget Delivery", "value": 98 }
+        ],
+        "highlights": [
+          "5D Digital Twin Modeling",
+          "In-House Structural P.E. Leads",
+          "Direct Mill Steel Procurement"
+        ]
+      },
+      {
+        "id": "safety",
+        "label": "Zero-Harm Safety",
+        "title": "OSHA Platinum Site Telemetry",
+        "description": "Drone LiDAR scans and IoT structural sensors protect our crews and surrounding communities 24/7.",
+        "image": "/assets/images/bim-engineers.webp",
+        "metrics": [
+          { "label": "OSHA Safety Score", "value": 100 },
+          { "label": "Subcontractor Vetting", "value": 98 }
+        ],
+        "highlights": [
+          "0.42 EMR Safety Rating",
+          "Daily Drone LiDAR Scans",
+          "Dedicated Site Safety Directors"
+        ]
+      },
+      {
+        "id": "sustainability",
+        "label": "Green Building",
+        "title": "Low-Carbon Concrete & Mass Timber",
+        "description": "Carbon-cured concrete and solar-active facades cut building energy consumption by up to 45%.",
+        "image": "/assets/images/hero-4.webp",
+        "metrics": [
+          { "label": "LEED Gold/Platinum Rate", "value": 96 },
+          { "label": "Recycled Steel Usage", "value": 92 }
+        ],
+        "highlights": [
+          "Carbon-Cured Concrete",
+          "Net-Zero Envelope Systems",
+          "10-Year Structural Warranty"
+        ]
+      }
+    ],
+    "founder": {
+      "avatar": "/assets/images/team-1.webp",
+      "name": "Marcus Vance, PE, AIA",
+      "role": "Founder & CEO"
+    },
+    "cta": {
+      "label": "Explore Services",
+      "href": "#service"
+    }
+  },
+  "services": {
+    "sectionId": "service",
+    "eyebrow": "OUR SERVICES",
+    "heading": {
+      "prefix": "Specialized",
+      "accent": "Building",
+      "suffix": "Divisions."
+    },
+    "intro": "Turnkey engineering and contracting led by licensed P.E. principals.",
+    "cardCtaLabel": "Request Spec & Bid",
+    "cardCtaHref": "#contact",
+    "items": [
+      {
+        "id": "commercial",
+        "title": "Commercial Skyscrapers",
+        "subtitle": "Class-A Towers & Mixed-Use",
+        "description": "Structural steel erection and unitized glass curtain walls for landmark urban towers.",
+        "image": "/assets/images/commercial.webp",
+        "deliverables": ["Diagrid Steel", "Curtain Walls", "Smart MEP"],
+        "metric": "180+ Towers"
+      },
+      {
+        "id": "residential",
+        "title": "Luxury Custom Estates",
+        "subtitle": "Cantilevered Villas & Penthouses",
+        "description": "Museum-grade private residences in architectural concrete, stone, and structural glass.",
+        "image": "/assets/images/residential.webp",
+        "deliverables": ["Exposed Concrete", "Steel Cantilevers", "Geothermal"],
+        "metric": "120+ Estates"
+      },
+      {
+        "id": "infrastructure",
+        "title": "Civil & Bridge Works",
+        "subtitle": "Transit Spans & Deep Foundations",
+        "description": "Cable-stayed bridges, marine caissons, and seismic-grade public infrastructure.",
+        "image": "/assets/images/bridge.webp",
+        "deliverables": ["Secant Piling", "Segmental Spans", "Seismic Core"],
+        "metric": "$1.4B Civil"
+      },
+      {
+        "id": "industrial",
+        "title": "Hyperscale & Industrial",
+        "subtitle": "AI Data Centers & Cleanrooms",
+        "description": "Fast-track mission-critical compute campuses and automated logistics hubs.",
+        "image": "/assets/images/industrial.webp",
+        "deliverables": ["Laser-Screed Slabs", "180MW Power", "Long-Span Truss"],
+        "metric": "14M+ Sq. Ft."
+      },
+      {
+        "id": "preconstruction",
+        "title": "5D BIM & Pre-Construction",
+        "subtitle": "Digital Twins & GMP Estimating",
+        "description": "Virtual clash detection and value engineering that locks in budgets before site work.",
+        "image": "/assets/images/bim-engineers.webp",
+        "deliverables": ["5D BIM Twin", "GMP Lock-In", "Soil Feasibility"],
+        "metric": "18% Savings"
+      },
+      {
+        "id": "renovation",
+        "title": "Adaptive Reuse & Retrofit",
+        "subtitle": "Historic & Net-Zero Upgrades",
+        "description": "Structural underpinning, mass-timber overbuilds, and deep energy modernizations.",
+        "image": "/assets/images/renovation.webp",
+        "deliverables": ["Carbon-Fiber", "Facade Restore", "LEED Retrofit"],
+        "metric": "65+ Landmarks"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "sectionId": "why-choose-us",
+    "eyebrow": "WHY CHOOSE US",
+    "heading": {
+      "prefix": "Built for",
+      "accent": "Certainty",
+      "suffix": "& Speed."
+    },
+    "intro": "Visual transparency, self-performed structural trades, and locked GMP contracts.",
+    "verifiedLabel": "Audited Metric",
+    "reasons": [
+      {
+        "id": "gmp",
+        "title": "Locked GMP Pricing",
+        "description": "Zero surprise change orders via upfront 5D BIM quantity lock-in and direct steel mill procurement.",
+        "stat": "99.2%",
+        "statLabel": "Budget Accuracy",
+        "image": "/assets/images/commercial.webp"
+      },
+      {
+        "id": "cameras",
+        "title": "24/7 Live Site Cameras",
+        "description": "Real-time 4K drone LiDAR & telemetry portal accessible from any device worldwide.",
+        "stat": "100%",
+        "statLabel": "Live Visibility",
+        "image": "/assets/images/hero-1.webp"
+      },
+      {
+        "id": "trades",
+        "title": "In-House Iron & Concrete",
+        "description": "450+ direct master tradespeople accelerate critical path schedules without broker delays.",
+        "stat": "3.2x",
+        "statLabel": "Faster Mobilize",
+        "image": "/assets/images/bim-engineers.webp"
+      },
+      {
+        "id": "warranty",
+        "title": "10-Year Structural Warranty",
+        "description": "Comprehensive structural & building envelope protection with 24-month seasonal commissioning.",
+        "stat": "10 Yrs",
+        "statLabel": "Full Warranty",
+        "image": "/assets/images/hero-2.webp"
+      }
+    ]
+  },
+  "projects": {
+    "sectionId": "project",
+    "eyebrow": "FEATURED PORTFOLIO",
+    "heading": {
+      "prefix": "Iconic",
+      "accent": "Structures",
+      "suffix": "Gallery."
+    },
+    "categories": [
+      "All",
+      "Commercial",
+      "Residential",
+      "Infrastructure",
+      "Industrial"
+    ],
+    "labels": {
+      "completedPrefix": "BUILT",
+      "scaleLabel": "Area",
+      "durationLabel": "Timeline",
+      "locationLabel": "Location",
+      "contractValueLabel": "Budget",
+      "totalAreaLabel": "Scale",
+      "clientLabel": "Client",
+      "highlightsHeading": "Key Engineering Milestones",
+      "galleryHeading": "Project Photography",
+      "modalFooterPrompt": "Planning a similar structure?",
+      "modalCtaLabel": "Request Similar Bid",
+      "modalCtaHref": "#contact",
+      "closeModalAria": "Close project details"
+    },
+    "items": [
+      {
+        "id": "meridian-tower",
+        "title": "The Meridian Financial Tower",
+        "category": "Commercial",
+        "location": "Manhattan, NY",
+        "year": "2025",
+        "area": "1.42M Sq. Ft.",
+        "budget": "$410M",
+        "duration": "32 Months",
+        "client": "Vanguard REIT",
+        "image": "/assets/images/commercial.webp",
+        "gallery": [
+          "/assets/images/hero-1.webp",
+          "/assets/images/hero-3.webp"
+        ],
+        "summary": "64-story LEED Platinum tower featuring a diagrid structural steel exoskeleton and acoustic triple-glazed facade.",
+        "highlights": [
+          "Diagrid steel cut tonnage by 18%",
+          "Delivered 6 weeks ahead of schedule",
+          "LEED Platinum Certified"
+        ]
+      },
+      {
+        "id": "solstice-house",
+        "title": "Solstice Cliffside Villa",
+        "category": "Residential",
+        "location": "Big Sur, CA",
+        "year": "2026",
+        "area": "24,800 Sq. Ft.",
+        "budget": "$38M",
+        "duration": "22 Months",
+        "client": "Private Trust",
+        "image": "/assets/images/hero-2.webp",
+        "gallery": [
+          "/assets/images/residential.webp",
+          "/assets/images/hero-4.webp"
+        ],
+        "summary": "Cantilevered board-formed concrete estate anchored 45 feet into coastal granite bedrock.",
+        "highlights": [
+          "42-ft ocean bluff cantilever",
+          "Geothermal radiant microgrid",
+          "2026 AIA Craftsmanship Award"
+        ]
+      },
+      {
+        "id": "cascadia-crossing",
+        "title": "Cascadia Transit Bridge",
+        "category": "Infrastructure",
+        "location": "Seattle, WA",
+        "year": "2025",
+        "area": "2.8 Mile Span",
+        "budget": "$295M",
+        "duration": "36 Months",
+        "client": "PNW Transit",
+        "image": "/assets/images/bridge-span.webp",
+        "gallery": [
+          "/assets/images/bridge.webp",
+          "/assets/images/hero-3.webp"
+        ],
+        "summary": "Seismic-isolated cable-stayed transit crossing engineered for a 100-year service life.",
+        "highlights": [
+          "9.0-magnitude seismic resilience",
+          "Zero marine habitat impact",
+          "1.2M zero-incident work hours"
+        ]
+      },
+      {
+        "id": "aether-datacenter",
+        "title": "Aether Hyperscale AI Campus",
+        "category": "Industrial",
+        "location": "Phoenix, AZ",
+        "year": "2025",
+        "area": "850,000 Sq. Ft.",
+        "budget": "$220M",
+        "duration": "16 Months",
+        "client": "Aether Cloud",
+        "image": "/assets/images/datacenter.webp",
+        "gallery": [
+          "/assets/images/industrial.webp",
+          "/assets/images/bim-engineers.webp"
+        ],
+        "summary": "Tier-IV mission-critical AI compute campus with 180MW substation and liquid cooling.",
+        "highlights": [
+          "Fast-track 16-month delivery",
+          "Zero-water thermal rejection",
+          "FF85 laser-screeded slabs"
+        ]
+      },
+      {
+        "id": "foundry-arts",
+        "title": "The Ironworks Mixed-Use Hub",
+        "category": "Commercial",
+        "location": "Chicago, IL",
+        "year": "2024",
+        "area": "540,000 Sq. Ft.",
+        "budget": "$145M",
+        "duration": "24 Months",
+        "client": "Sterling Urban",
+        "image": "/assets/images/hero-3.webp",
+        "gallery": [
+          "/assets/images/renovation.webp",
+          "/assets/images/commercial.webp"
+        ],
+        "summary": "1912 steel foundry adaptive reuse topped with a 22-story mass-timber overbuild.",
+        "highlights": [
+          "Preserved 1912 riveted trusses",
+          "8,400 tons CO2 sequestered",
+          "ULI Excellence Finalist"
+        ]
+      },
+      {
+        "id": "aspen-sanctuary",
+        "title": "Kestrel Ridge Alpine Estate",
+        "category": "Residential",
+        "location": "Aspen, CO",
+        "year": "2025",
+        "area": "19,200 Sq. Ft.",
+        "budget": "$31M",
+        "duration": "20 Months",
+        "client": "Kestrel Family",
+        "image": "/assets/images/hero-4.webp",
+        "gallery": [
+          "/assets/images/hero-2.webp",
+          "/assets/images/residential.webp"
+        ],
+        "summary": "High-altitude Valser quartzite and heated structural glass compound at 9,400 ft.",
+        "highlights": [
+          "180 lbs/sq.ft snow load rating",
+          "Subterranean collector gallery",
+          "Year-round dome construction"
+        ]
+      }
+    ]
+  },
+  "team": {
+    "sectionId": "team",
+    "eyebrow": "LEADERSHIP TEAM",
+    "heading": {
+      "prefix": "Principal",
+      "accent": "Architects",
+      "suffix": "& Engineers."
+    },
+    "intro": "Licensed P.E. and AIA principals leading every structure.",
+    "focusLabel": "Specialty",
+    "careersBanner": {
+      "highlight": "Join our engineering studio",
+      "text": "in New York, Austin, and Seattle.",
+      "ctaLabel": "View Open Roles",
+      "ctaHref": "#contact"
+    },
+    "members": [
+      {
+        "id": "marcus-vance",
+        "name": "Marcus Vance, PE, AIA",
+        "role": "Founder & CEO",
+        "credentials": "M.S. Structural Eng., MIT",
+        "specialty": "Supertall Towers & Diagrid Steel",
+        "bio": "Principal structural lead on 40+ commercial skyscrapers across North America.",
+        "image": "/assets/images/team-1.webp"
+      },
+      {
+        "id": "elena-rostova",
+        "name": "Dr. Elena Rostova, PE",
+        "role": "Chief BIM & Structural Officer",
+        "credentials": "Ph.D. Seismic Eng., Stanford",
+        "specialty": "5D Digital Twins & Seismic Bridges",
+        "bio": "Pioneered our 5D BIM clash-detection and low-carbon concrete workflows.",
+        "image": "/assets/images/team-2.webp"
+      },
+      {
+        "id": "david-thorne",
+        "name": "David Thorne, DBIA",
+        "role": "EVP of Field Operations",
+        "credentials": "B.S. Civil Eng., Georgia Tech",
+        "specialty": "Heavy Civil & OSHA Platinum Safety",
+        "bio": "Directs 450+ field engineers with an industry-best 0.42 EMR safety record.",
+        "image": "/assets/images/team-3.webp"
+      },
+      {
+        "id": "julian-chen",
+        "name": "Julian Chen, AIA",
+        "role": "Director, Luxury Estates",
+        "credentials": "M.Arch, Harvard GSD",
+        "specialty": "Architectural Concrete & Villas",
+        "bio": "Crafts museum-grade private residences from Big Sur to Aspen.",
+        "image": "/assets/images/team-4.webp"
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionId": "testimonials",
+    "eyebrow": "CLIENT REVIEWS",
+    "heading": {
+      "prefix": "Trusted by",
+      "accent": "Landmark",
+      "suffix": "Developers."
+    },
+    "labels": {
+      "prevAria": "Previous review",
+      "nextAria": "Next review",
+      "verifiedPrefix": "Delivered:",
+      "deliveredScopeLabel": "Contract Value"
+    },
+    "items": [
+      {
+        "id": "test-1",
+        "quote": "Delivered our 64-story Midtown tower 6 weeks early and $4.2M under our GMP budget.",
+        "author": "Jonathan Sterling",
+        "role": "Managing Partner",
+        "company": "Vanguard REIT",
+        "projectDelivered": "Meridian Tower, NY",
+        "projectValue": "$410M High-Rise",
+        "rating": 5,
+        "avatar": "/assets/images/client-1.webp",
+        "projectImage": "/assets/images/commercial.webp"
+      },
+      {
+        "id": "test-2",
+        "quote": "Their board-formed architectural concrete and 42-foot ocean cantilever are pure watchmaking.",
+        "author": "Clara Lindqvist, FAIA",
+        "role": "Founding Architect",
+        "company": "Lindqvist Studio",
+        "projectDelivered": "Solstice Villa, Big Sur",
+        "projectValue": "$38M Custom Estate",
+        "rating": 5,
+        "avatar": "/assets/images/client-2.webp",
+        "projectImage": "/assets/images/hero-2.webp"
+      },
+      {
+        "id": "test-3",
+        "quote": "1.2 million work hours on the Cascadia Bridge with zero safety incidents and flawless DOT scores.",
+        "author": "Marcus Alverez, PE",
+        "role": "Capital Director",
+        "company": "PNW Transit Authority",
+        "projectDelivered": "Cascadia Bridge, WA",
+        "projectValue": "$295M Civil Span",
+        "rating": 5,
+        "avatar": "/assets/images/client-3.webp",
+        "projectImage": "/assets/images/bridge-span.webp"
+      },
+      {
+        "id": "test-4",
+        "quote": "Mobilized in 10 days and handed over our 180MW AI data campus in 16 months flat.",
+        "author": "Priya Nair",
+        "role": "VP Global Infrastructure",
+        "company": "Aether Cloud",
+        "projectDelivered": "Aether AI Campus, AZ",
+        "projectValue": "$220M Data Center",
+        "rating": 5,
+        "avatar": "/assets/images/client-4.webp",
+        "projectImage": "/assets/images/datacenter.webp"
+      }
+    ]
+  },
+  "faq": {
+    "sectionId": "faq",
+    "eyebrow": "ENGINEERING FAQ",
+    "heading": {
+      "prefix": "Quick",
+      "accent": "Answers",
+      "suffix": "Before You Build."
+    },
+    "intro": "Everything you need to know about GMP pricing, 5D BIM, and warranties.",
+    "supportCard": {
+      "image": "/assets/images/bim-engineers.webp",
+      "badge": "48-HOUR FEASIBILITY AUDIT",
+      "title": "Talk to a Principal Structural Estimator",
+      "description": "Send your schematic plans for a complimentary cost and schedule breakdown.",
+      "primaryCta": {
+        "label": "Ask an Engineer",
+        "href": "#contact"
+      },
+      "phoneCta": {
+        "label": "+1 000000000",
+        "href": "tel:+1000000000"
+      }
+    },
+    "items": [
+      {
+        "id": "faq-1",
+        "category": "Cost & GMP",
+        "question": "How do you prevent budget overruns and change orders?",
+        "answer": "Our 5D BIM digital twin resolves all structural and MEP clashes prior to site mobilization, allowing us to lock in a Guaranteed Maximum Price (GMP) contract."
+      },
+      {
+        "id": "faq-2",
+        "category": "Timeline",
+        "question": "When should we bring ApexBuild onto the project?",
+        "answer": "Engaging us during Schematic Design saves an average of 14%–18% in structural costs and shaves 6–10 weeks off the master schedule."
+      },
+      {
+        "id": "faq-3",
+        "category": "Safety & Bonding",
+        "question": "What bonding capacity and safety ratings do you hold?",
+        "answer": "We carry $250M single-project bonding, ISO 9001 certification, and OSHA Platinum status with a 0.42 EMR rating."
+      },
+      {
+        "id": "faq-4",
+        "category": "Live Tracking",
+        "question": "How do we monitor daily construction progress?",
+        "answer": "Every client receives 24/7 access to live 4K site cameras, weekly drone LiDAR overlays, and transparent milestone billing."
+      },
+      {
+        "id": "faq-5",
+        "category": "Warranty",
+        "question": "What post-handover warranty is included?",
+        "answer": "All projects include a 10-Year Structural & Envelope Warranty plus 24 months of seasonal MEP commissioning."
+      }
+    ]
+  },
+  "contact": {
+    "sectionId": "contact",
+    "eyebrow": "START YOUR PROJECT",
+    "heading": {
+      "prefix": "Request a",
+      "accent": "24-Hour",
+      "suffix": "Estimate."
+    },
+    "intro": "Send us a message below or connect directly with our Beverly Hills engineering headquarters.",
+    "officesTitle": "Direct Contact Channels",
+    "offices": [
+      {
+        "city": "Beverly Hills HQ",
+        "label": "OUR ADDRESS",
+        "value": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
+        "subtext": "Headquarters & Structural Engineering Studio",
+        "icon": "map-pin",
+        "href": "#contact",
+        "image": "/assets/images/commercial.webp"
+      },
+      {
+        "city": "Estimating & Inquiries",
+        "label": "EMAIL US",
+        "value": "info@xyz.com",
+        "subtext": "Direct Principal Estimator & Bid Desk",
+        "icon": "mail",
+        "href": "mailto:info@xyz.com",
+        "image": "/assets/images/hero-2.webp"
+      },
+      {
+        "city": "24/7 Engineering Line",
+        "label": "CONTACT NUMBER",
+        "value": "+1 000000000",
+        "subtext": "Immediate Site & Project Consultation",
+        "icon": "phone",
+        "href": "tel:+1000000000",
+        "image": "/assets/images/bridge-span.webp"
+      }
+    ],
+    "directMetrics": [
+      {
+        "icon": "clock",
+        "label": "Proposal Turnaround",
+        "value": "24 Hours"
+      },
+      {
+        "icon": "shield",
+        "label": "Bonding Capacity",
+        "value": "$250M Single-Build"
+      }
+    ],
+    "form": {
+      "badge": "DIRECT PROJECT INQUIRY",
+      "title": "Send Us a Message",
+      "subtitle": "Fill in your contact details and project message below. Our engineering team responds within 24 hours.",
+      "fields": {
+        "nameLabel": "Full Name *",
+        "namePlaceholder": "Enter your full name",
+        "emailLabel": "Email Address *",
+        "emailPlaceholder": "Enter your email address",
+        "phoneLabel": "Phone Number *",
+        "phonePlaceholder": "+1 000000000",
+        "messageLabel": "Your Message *",
+        "messagePlaceholder": "Tell us about your construction project, timeline, or questions..."
+      },
+      "submitButton": "Send Message",
+      "confidentialNote": "100% Confidential • Direct P.E. Engineer Response",
+      "successState": {
+        "badge": "MESSAGE SENT",
+        "title": "Thank You for Reaching Out",
+        "message": "Our principal engineering team has received your message and will contact you within 24 business hours.",
+        "resetButton": "Send Another Message"
+      }
+    }
+  }
+}

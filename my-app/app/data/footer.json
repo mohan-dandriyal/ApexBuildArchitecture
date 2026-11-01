@@ -1,0 +1,187 @@
+{
+  "footer": {
+    "theme": {
+      "background": "#F1F5F9",
+      "surface": "#FFFFFF",
+      "text": "#0B1120",
+      "muted": "#475569",
+      "accent": "#EA580C",
+      "border": "rgba(30, 58, 138, 0.10)"
+    },
+    "topSection": {
+      "eyebrow": "READY TO BREAK GROUND?",
+      "title": "Let's engineer a landmark",
+      "titleAccent": "built for generations.",
+      "description": "Turnkey commercial skyscrapers, civil transit spans, and bespoke architectural estates delivered under Guaranteed Maximum Price.",
+      "bannerImage": "/assets/images/hero-1.webp",
+      "badges": [
+        {
+          "icon": "shield",
+          "label": "OSHA Platinum"
+        },
+        {
+          "icon": "award",
+          "label": "ISO 9001"
+        },
+        {
+          "icon": "hardhat",
+          "label": "38 States"
+        }
+      ],
+      "button": {
+        "label": "Book Site Consultation",
+        "href": "#contact",
+        "icon": "arrow-up-right"
+      },
+      "hotlinePrefix": "24/7 Engineering Line:",
+      "hotlineNumber": "+1 000000000"
+    },
+    "mainSection": {
+      "brand": {
+        "logo": "/logo.svg",
+        "logoAlt": "ApexBuild Construction Group",
+        "description": "Pioneering structural excellence across commercial towers, civil bridges, and custom residences since 1999.",
+        "socialTitle": "Connect With Us",
+        "socialLinks": [
+          {
+            "name": "LinkedIn",
+            "icon": "linkedin",
+            "href": "https://linkedin.com/"
+          },
+          {
+            "name": "Instagram",
+            "icon": "instagram",
+            "href": "https://instagram.com/"
+          },
+          {
+            "name": "Facebook",
+            "icon": "facebook",
+            "href": "https://facebook.com/"
+          },
+          {
+            "name": "YouTube",
+            "icon": "youtube",
+            "href": "https://youtube.com/"
+          }
+        ]
+      },
+      "navigation": {
+        "title": "Directory",
+        "links": [
+          {
+            "label": "Home",
+            "href": "#home"
+          },
+          {
+            "label": "About Us",
+            "href": "#about"
+          },
+          {
+            "label": "Services",
+            "href": "#service"
+          },
+          {
+            "label": "Why Choose Us",
+            "href": "#why-choose-us"
+          },
+          {
+            "label": "Portfolio",
+            "href": "#project"
+          },
+          {
+            "label": "Leadership Team",
+            "href": "#team"
+          },
+          {
+            "label": "Testimonial",
+            "href": "#testimonials"
+          },
+          {
+            "label": "Engineering FAQ",
+            "href": "#faq"
+          }
+        ]
+      },
+      "programs": {
+        "title": "Divisions",
+        "links": [
+          {
+            "label": "Commercial High-Rise",
+            "href": "#service"
+          },
+          {
+            "label": "Luxury Custom Estates",
+            "href": "#service"
+          },
+          {
+            "label": "Civil & Bridge Works",
+            "href": "#service"
+          },
+          {
+            "label": "5D BIM Digital Twins",
+            "href": "#service"
+          },
+          {
+            "label": "LEED Green Retrofits",
+            "href": "#service"
+          },
+          {
+            "label": "AI Data Campuses",
+            "href": "#service"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Global HQ",
+        "description": "Direct access to principal structural estimators.",
+        "items": [
+          {
+            "label": "Address",
+            "value": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
+            "icon": "map-pin",
+            "href": "#contact"
+          },
+          {
+            "label": "Email",
+            "value": "info@xyz.com",
+            "icon": "mail",
+            "href": "mailto:info@xyz.com"
+          },
+          {
+            "label": "Contact",
+            "value": "+1 000000000",
+            "icon": "phone",
+            "href": "tel:+1000000000"
+          }
+        ],
+        "button": {
+          "label": "Open Contact Form",
+          "href": "#contact"
+        }
+      }
+    },
+    "bottomSection": {
+      "copyright": "© 2026 ApexBuild  All Rights Reserved. Powered by Lestow",
+      "credit": "",
+      "links": [
+        {
+          "label": "OSHA Safety",
+          "href": "#why-choose-us"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "#footer"
+        },
+        {
+          "label": "10-Yr Warranty",
+          "href": "#faq"
+        }
+      ],
+      "backToTop": {
+        "label": "Back to top",
+        "icon": "arrow-up",
+        "href": "#home"
+      }
+    }
+  }
+}

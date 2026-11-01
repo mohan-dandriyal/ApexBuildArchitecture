@@ -1,0 +1,12 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Architectural Icon Box -->
+  <rect x="2" y="6" width="48" height="48" rx="14" fill="#1E3A8A" stroke="#EA580C" stroke-width="2"/>
+  <!-- Structural Steel / Crane / Apex Geometry -->
+  <path d="M14 42L26 16L38 42" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 33H33" stroke="#FB923C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M26 16V42" stroke="#FB923C" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <circle cx="26" cy="16" r="3.5" fill="#EA580C"/>
+  <!-- Brand Typography -->
+  <text x="62" y="32" fill="#0B1120" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="1">APEX<tspan fill="#EA580C">BUILD</tspan></text>
+  <text x="63" y="46" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8.5" letter-spacing="3.5">ARCHITECTURE &amp; CIVIL</text>
+</svg>
