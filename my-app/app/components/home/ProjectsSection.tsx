@@ -3,12 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  MapPin,
-} from "lucide-react";
+import { MapPin } from "lucide-react";
 import { landingData } from "@/app/types/landingData";
-
-const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function ProjectsSection() {
   const { projects } = landingData;
@@ -31,10 +27,10 @@ export default function ProjectsSection() {
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-16">
         {/* Section Header + Category Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="mb-10 flex flex-col justify-between gap-6 border-b border-slate-200 pb-6 lg:flex-row lg:items-end"
         >
           <div>
@@ -60,11 +56,10 @@ export default function ProjectsSection() {
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`cursor-pointer rounded-full px-5 py-2.5 text-xs font-bold tracking-wider transition-all duration-300 ${
-                    isActive
+                  className={`cursor-pointer rounded-full px-5 py-2.5 text-xs font-bold tracking-wider transition-all duration-300 ${isActive
                       ? "bg-[#1E3A8A] text-white shadow-md shadow-blue-900/15"
                       : "border border-slate-200 bg-white text-slate-600 hover:border-[#EA580C] hover:text-[#EA580C]"
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>
@@ -73,20 +68,27 @@ export default function ProjectsSection() {
           </div>
         </motion.div>
 
-        {/* Full-Bleed Visual Portfolio Grid */}
-        <motion.div
-          layout
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+        {/* Visual Portfolio Grid with Uniform Fade In & Out Effect for All Filters */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {filteredProjects.map((project, index) => (
               <motion.article
-                layout
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.94, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.92, y: 10 }}
-                transition={{ duration: 0.45, ease }}
+                key={`${selectedCategory}-${project.id}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 0.35,
+                  delay: index * 0.04,
+                  ease: "easeInOut",
+                }}
                 className="group relative h-[400px] overflow-hidden rounded-[28px] border border-slate-200 bg-[#0B1120] shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-[#EA580C] hover:shadow-2xl hover:shadow-blue-950/15"
               >
                 <Image
@@ -94,9 +96,9 @@ export default function ProjectsSection() {
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/90 via-[#0B1120]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/90 via-[#0B1120]/25 to-transparent" />
 
                 {/* Top Floating Badges */}
                 <div className="absolute inset-x-5 top-5 flex items-center justify-between">
@@ -104,9 +106,9 @@ export default function ProjectsSection() {
                     <span className="rounded-full bg-white/95 px-3.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-[#1E3A8A] shadow-sm backdrop-blur-md">
                       {project.category}
                     </span>
-                    <span className="rounded-full bg-[#EA580C] px-3 py-1 font-mono text-[11px] font-bold text-white shadow-sm">
+                    {/* <span className="rounded-full bg-[#EA580C] px-3 py-1 font-mono text-[11px] font-bold text-white shadow-sm">
                       {project.budget}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
 
@@ -116,29 +118,36 @@ export default function ProjectsSection() {
                     <span className="inline-flex items-center gap-1 font-semibold text-slate-600">
                       <MapPin size={13} className="text-[#EA580C]" />
                       {project.location}
-                    </span>
-                    <span className="font-mono text-[11px] font-bold text-[#1E3A8A]">
-                      {projects.labels.completedPrefix} {project.year}
-                    </span>
+                    </span>.
+                    {
+                      project.year &&
+                      <span className="font-mono text-[11px] font-bold text-[#1E3A8A]">
+                        {projects.labels.completedPrefix} {project.year}
+                      </span>
+                    }
                   </div>
 
                   <h3 className="mt-1.5 font-display text-xl font-extrabold text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
                     {project.title}
                   </h3>
 
-                  <div className="mt-3 flex items-center justify-between border-t border-slate-200 pt-2.5 text-xs">
-                    <span className="font-mono font-bold text-[#EA580C]">
-                      {project.area}
-                    </span>
-                    <span className="font-mono font-semibold text-slate-500">
-                      {project.duration}
-                    </span>
-                  </div>
+                  {
+                    (project.duration || project.area) &&
+                    <div className="mt-3 flex items-center justify-between border-t border-slate-200 pt-2.5 text-xs">
+                      <span className="font-mono font-bold text-[#EA580C]">
+                        {project.area}
+                      </span>
+                      <span className="font-mono font-semibold text-slate-500">
+                        {project.duration}
+                      </span>
+                    </div>
+                  }
+
                 </div>
               </motion.article>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

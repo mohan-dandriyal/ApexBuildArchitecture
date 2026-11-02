@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
 
 import headerData from "@/app/data/header.json";
 
@@ -210,8 +210,22 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden xl:block">
+          {/* Desktop Helpline & CTA */}
+          <div className="hidden items-center gap-3.5 xl:flex">
+            {"helpline" in header && header.helpline && (
+              <a
+                href={(header.helpline as { href: string; number: string }).href}
+                className="group flex items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-2 text-xs font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
+              >
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C]/10 text-[#EA580C] transition-colors group-hover:bg-[#EA580C] group-hover:text-white">
+                  <Phone size={13} />
+                </span>
+                <span className="font-mono text-xs tracking-tight">
+                  {(header.helpline as { href: string; number: string }).number}
+                </span>
+              </a>
+            )}
+
             {cta.enabled && (
               <a
                 href={cta.btnLink}
@@ -219,7 +233,7 @@ export default function Header() {
                 className="group inline-flex items-center gap-3.5 rounded-full bg-[#1E3A8A] py-2 pl-6 pr-2 text-sm font-bold text-white shadow-lg shadow-blue-900/15 transition-all duration-300 hover:bg-[#EA580C]"
               >
                 {cta.btnText}
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EA580C] text-white transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/20">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C] text-white transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/20">
                   <ArrowUpRight size={17} />
                 </span>
               </a>
@@ -307,7 +321,7 @@ export default function Header() {
                         className="group flex items-center justify-between border-b border-slate-100 py-4"
                       >
                         <span
-                          className={`font-display text-2xl font-bold transition-colors duration-300 ${
+                          className={`font-display text-lg font-bold transition-colors duration-300 ${
                             isActive
                               ? "text-[#EA580C]"
                               : "text-[#0B1120] group-hover:text-[#1E3A8A]"
@@ -325,6 +339,25 @@ export default function Header() {
                   );
                 })}
               </nav>
+
+              {"helpline" in header && header.helpline && (
+                <a
+                  href={(header.helpline as { href: string; number: string; label: string }).href}
+                  className="mt-6 flex items-center gap-3 rounded-2xl border border-slate-200 bg-[#F8FAFC] p-3.5 transition-colors hover:border-[#EA580C]"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EA580C] text-white">
+                    <Phone size={18} />
+                  </span>
+                  <div>
+                    <span className="block font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                      {(header.helpline as { label: string }).label}
+                    </span>
+                    <span className="font-mono text-sm font-bold text-[#0B1120]">
+                      {(header.helpline as { number: string }).number}
+                    </span>
+                  </div>
+                </a>
+              )}
 
               {cta.enabled && (
                 <a

@@ -1,250 +1,221 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Award, CheckCircle2 } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { landingData } from "@/app/types/landingData";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+function parseStatValue(val: string) {
+  const match = val.match(/^([^0-9.]*)([0-9.]+)(.*)$/);
+  if (!match) return { prefix: "", target: 0, suffix: val, decimals: 0 };
+  const prefix = match[1] || "";
+  const numStr = match[2];
+  const suffix = match[3] || "";
+  const decimals = numStr.includes(".") ? numStr.split(".")[1].length : 0;
+  const target = parseFloat(numStr) || 0;
+  return { prefix, target, suffix, decimals };
+}
+
+function StatCounter({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const { prefix, target, suffix, decimals } = parseStatValue(value);
+  const [displayNumber, setDisplayNumber] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let startTime: number | null = null;
+    let animationFrameId: number;
+    const duration = 2000; // 2 seconds animation
+
+    const animateCount = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Ease out cubic progress
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const current = easeProgress * target;
+
+      setDisplayNumber(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animateCount);
+      } else {
+        setDisplayNumber(target);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(animateCount);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isInView, target]);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {prefix}
+      {displayNumber.toFixed(decimals)}
+      {suffix}
+    </span>
+  );
+}
+
 export default function AboutSection() {
   const { about } = landingData;
-  const [selectedPhoto, setSelectedPhoto] = useState(0);
-  const [activePillar, setActivePillar] = useState(0);
-
-  const currentPhoto = about.gallery[selectedPhoto];
 
   return (
     <section
       id={about.sectionId}
-      className="relative overflow-hidden border-t border-slate-200 bg-white py-14 lg:py-16"
+      className="relative overflow-hidden border-t border-slate-200 bg-white py-14 lg:py-18"
     >
-      <div className="pointer-events-none absolute inset-0 bg-blueprint-grid opacity-50" />
+      <div className="pointer-events-none absolute inset-0 bg-blueprint-grid opacity-40" />
 
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-16">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease }}
-          className="mb-10 flex flex-col justify-between gap-4 border-b border-slate-200 pb-6 lg:flex-row lg:items-end"
-        >
-          <div>
-            <span className="inline-flex items-center gap-2.5 font-mono text-xs font-bold tracking-[0.22em] text-[#EA580C]">
+        {/* ================= MAIN 2-COLUMN ABOUT COMPOSITION ================= */}
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* ================= LEFT COLUMN: OVERLAPPING IMAGE COMPOSITION ================= */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease }}
+            className="relative lg:col-span-6"
+          >
+            <div className="relative mx-auto sm:max-w-[540px] sm:pb-14 sm:pr-10 lg:mx-0">
+              {/* Main Primary Large Photo */}
+              <div className="relative aspect-[4/3]  sm:w-[84%] overflow-hidden rounded-[30px] sm:rounded-[36px] shadow-xl shadow-slate-900/10 sm:h-[500px]">
+                <Image
+                  src={about.primaryImage.src}
+                  alt={about.primaryImage.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Floating Experience Badge (Pinned on Top-Right of Main Photo) */}
+              <div className="absolute right-2 top-6 z-20 hidden sm:flex flex-col items-center justify-center rounded-2xl bg-[#0F2942] px-5 py-4 text-white shadow-xl shadow-blue-950/20 sm:right-6 sm:top-10">
+                <span className="font-display text-3xl font-extrabold text-[#FB923C] sm:text-4xl leading-none">
+                  {about.experienceBadge.value}
+                </span>
+                <span className="mt-1 font-mono text-[10px] font-bold uppercase tracking-wider text-center text-blue-100 sm:text-[11px] leading-tight">
+                  {about.experienceBadge.label}
+                  <br />
+                  {about.experienceBadge.subtext}
+                </span>
+              </div>
+
+              {/* Overlapping Secondary Photo (Pinned on Bottom-Right) */}
+              <div className="absolute -bottom-2 right-0 z-10 aspect-[4/3] w-[58%] sm:w-[54%] overflow-hidden rounded-[26px] sm:rounded-[32px] border-4 border-white shadow-2xl shadow-slate-900/15 sm:bottom-0 sm:right-2 sm:h-[350px] sm:block hidden">
+                <Image
+                  src={about.secondaryImage.src}
+                  alt={about.secondaryImage.alt}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* ================= RIGHT COLUMN: EDITORIAL DETAILS & CHECKLIST ================= */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease }}
+            className="flex flex-col justify-center lg:col-span-6"
+          >
+            {/* Category / Eyebrow */}
+            <span className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-[#EA580C]">
               <span className="h-2 w-2 rounded-full bg-[#1E3A8A]" />
               {about.eyebrow}
             </span>
-            <h2 className="mt-2.5 font-display text-4xl font-extrabold leading-[1.06] text-[#0B1120] sm:text-5xl">
+
+            {/* Section Main Title */}
+            <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.12] text-[#0B1120] sm:text-4xl lg:text-[46px]">
               {about.heading.prefix}{" "}
               <span className="font-serif italic font-normal text-[#EA580C]">
                 {about.heading.accent}
               </span>{" "}
               {about.heading.suffix}
             </h2>
-          </div>
 
-          <p className="max-w-sm text-sm font-medium leading-6 text-slate-600">
-            {about.intro}
-          </p>
-        </motion.div>
+            {/* Narrative Story / Intro */}
+            <p className="mt-4 text-sm font-medium leading-7 text-slate-600 sm:text-base">
+              {about.story}
+            </p>
 
-        {/* Balanced 2-Column Showcase */}
-        <div className="grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
-          {/* Left Column: Interactive Architectural Gallery Showcase */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease }}
-            className="flex flex-col lg:col-span-6"
-          >
-            <div className="flex flex-1 flex-col justify-between overflow-hidden rounded-[28px] border border-slate-200 bg-[#F8FAFC] p-3.5 shadow-xl shadow-blue-950/5">
-              {/* Primary Large Photo */}
-              <div className="relative min-h-[340px] w-full flex-1 overflow-hidden rounded-2xl sm:min-h-[390px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentPhoto.src}
-                    initial={{ opacity: 0, scale: 1.05 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.5, ease }}
-                    className="relative h-full w-full"
-                  >
-                    <Image
-                      src={currentPhoto.src}
-                      alt={currentPhoto.alt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/85 via-transparent to-transparent" />
-                  </motion.div>
-                </AnimatePresence>
+            {/* Services Checklist Heading */}
+            <h3 className="mt-6 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
+              {about.specialServicesTitle}
+            </h3>
 
-                <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-[#1E3A8A] shadow-md backdrop-blur-md">
-                  {currentPhoto.caption}
-                </span>
-
-                <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl border border-white/20 bg-[#0B1120]/85 px-5 py-3.5 text-white backdrop-blur-md">
-                  <div className="flex items-center gap-4">
-                    <span className="font-display text-3xl font-extrabold text-[#FB923C] sm:text-4xl">
-                      {about.experienceBadge.value}
-                    </span>
-                    <div>
-                      <p className="font-display text-sm font-bold text-white">
-                        {about.experienceBadge.label}
-                      </p>
-                      <p className="text-xs text-slate-300">
-                        {about.experienceBadge.subtext}
-                      </p>
-                    </div>
-                  </div>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#EA580C] text-white">
-                    <Award size={20} />
-                  </span>
-                </div>
-              </div>
-
-              {/* 4-Photo Thumbnail Switcher Strip */}
-              <div className="mt-3 grid grid-cols-4 gap-2.5">
-                {about.gallery.map((img, idx) => {
-                  const isActive = idx === selectedPhoto;
-                  return (
-                    <button
-                      key={img.caption}
-                      type="button"
-                      onClick={() => setSelectedPhoto(idx)}
-                      className={`group relative h-20 cursor-pointer overflow-hidden rounded-xl border-2 transition-all duration-300 ${
-                        isActive
-                          ? "border-[#EA580C] ring-2 ring-[#EA580C]/20"
-                          : "border-transparent opacity-70 hover:opacity-100"
-                      }`}
-                    >
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        fill
-                        sizes="140px"
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column: Interactive Visual Pillar Stack & Founder Strip */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease }}
-            className="flex flex-col justify-between gap-3.5 lg:col-span-6"
-          >
-            {about.pillars.map((pillar, idx) => {
-              const isSelected = idx === activePillar;
-              const primaryMetric = pillar.metrics[0];
-
-              return (
+            {/* 2-Column Checklist */}
+            <div className="mt-3.5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {about.checklist.map((item) => (
                 <div
-                  key={pillar.id}
-                  onClick={() => setActivePillar(idx)}
-                  className={`group cursor-pointer overflow-hidden rounded-3xl border p-4 transition-all duration-300 ${
-                    isSelected
-                      ? "border-[#EA580C] bg-white shadow-lg shadow-blue-950/5"
-                      : "border-slate-200 bg-[#F8FAFC] hover:border-[#1E3A8A]/40 hover:bg-white"
-                  }`}
+                  key={item.id}
+                  className="flex items-center gap-2.5 text-xs font-semibold text-slate-700 sm:text-[13px]"
                 >
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                    <div className="relative h-24 w-full shrink-0 overflow-hidden rounded-2xl sm:w-32">
-                      <Image
-                        src={pillar.image}
-                        alt={pillar.title}
-                        fill
-                        sizes="130px"
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <span className="absolute left-2 top-2 rounded-md bg-[#1E3A8A] px-2 py-0.5 font-mono text-[10px] font-bold text-white">
-                        {primaryMetric.value}%
-                      </span>
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#EA580C]">
-                          {pillar.label}
-                        </span>
-                        <span className="font-mono text-xs font-bold text-[#1E3A8A]">
-                          {primaryMetric.label}
-                        </span>
-                      </div>
-
-                      <h3 className="mt-1 font-display text-lg font-bold text-[#0B1120]">
-                        {pillar.title}
-                      </h3>
-
-                      <p className="mt-1 text-xs leading-5 text-slate-600">
-                        {pillar.description}
-                      </p>
-
-                      <div className="mt-2.5 flex flex-wrap gap-1.5">
-                        {pillar.highlights.map((chip) => (
-                          <span
-                            key={chip}
-                            className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-[#F8FAFC] px-2.5 py-0.5 text-[11px] font-semibold text-[#0B1120]"
-                          >
-                            <CheckCircle2
-                              size={11}
-                              className="text-[#EA580C]"
-                            />
-                            {chip}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <CheckCircle2 size={14} className="stroke-[2.5]" />
+                  </span>
+                  <span>{item.label}</span>
                 </div>
-              );
-            })}
+              ))}
+            </div>
 
-            {/* Bottom Founder & CTA Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-[#F8FAFC] px-5 py-3.5">
-              <div className="flex items-center gap-3.5">
-                <div className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-[#EA580C]">
-                  <Image
-                    src={about.founder.avatar}
-                    alt={about.founder.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-display text-sm font-bold text-[#0B1120]">
-                    {about.founder.name}
-                  </p>
-                  <p className="text-xs font-medium text-slate-500">
-                    {about.founder.role}
-                  </p>
-                </div>
-              </div>
-
+            {/* Primary Action Button */}
+            <div className="mt-8">
               <a
                 href={about.cta.href}
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#1E3A8A] px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-[#EA580C]"
+                className="group inline-flex items-center gap-3 rounded-full bg-[#1E3A8A] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-xl shadow-blue-950/15 transition-all duration-300 hover:bg-[#EA580C]/80 hover:shadow-orange-600/25"
               >
                 <span>{about.cta.label}</span>
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C] transition-transform duration-300 group-hover:rotate-45">
+                  <ArrowUpRight size={14} />
+                </span>
               </a>
             </div>
           </motion.div>
         </div>
+
+        {/* ================= INTEGRATED ABOUT US ANIMATED COUNTER SECTION ================= */}
+        {about.stats && about.stats.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease }}
+            className="mt-14 border-t border-slate-200/80 pt-10"
+          >
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 sm:gap-6">
+              {about.stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={`group relative overflow-hidden p-6 text-center transition-all duration-300 hover:-translate-y-1 border-slate-200/90 hover:bg-white hover:shadow-blue-950/5 ${
+                    i < 3 ? "lg:border-r" : ""
+                  }`}
+                >
+                  <span className="block font-display text-3xl font-extrabold text-[#1E3A8A] transition-colors group-hover:text-[#EA580C] sm:text-4xl lg:text-5xl">
+                    <StatCounter value={stat.value} />
+                  </span>
+                  <h4 className="mt-2 font-display text-sm font-bold text-[#0B1120] sm:text-base">
+                    {stat.label}
+                  </h4>
+                  <p className="mt-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                    {stat.sub}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

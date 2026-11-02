@@ -11,6 +11,11 @@
       "name": "ApexBuild Construction",
       "tagline": "Modern Architecture & Structural Engineering"
     },
+    "helpline": {
+      "label": "24/7 Helpline",
+      "number": "+1 000000000",
+      "href": "tel:+1000000000"
+    },
     "announcement": {
       "enabled": true,
       "badge": "ISO 9001 • LEED PLATINUM",
@@ -49,10 +54,6 @@
         {
           "label": "Testimonial",
           "href": "#testimonials"
-        },
-        {
-          "label": "FAQ",
-          "href": "#faq"
         },
         {
           "label": "Contact",

@@ -12,6 +12,7 @@ import {
   HardHat,
   ShieldCheck,
   Award,
+  Clock,
   type LucideIcon,
 } from "lucide-react";
 import footerData from "@/app/data/footer.json";
@@ -110,25 +111,27 @@ export default function Footer() {
         backgroundColor: theme.background,
         color: theme.text,
       }}
-      className="relative overflow-hidden border-t border-slate-200 py-14 lg:pt-18 pb-4"
+      className="relative overflow-hidden border-t border-slate-200 py-14 lg:pt-18 pb-6"
     >
-      {/* ================= PHOTO-BACKED CTA BANNER ================= */}
+      <div className="pointer-events-none absolute inset-0 bg-blueprint-grid opacity-40" />
+
+      {/* ================= ELEVATED ARCHITECTURAL CTA BANNER ================= */}
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-16">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-3xl border border-blue-900/15 bg-[#0B1120] px-7 py-10 text-white shadow-2xl sm:px-12 sm:py-14 lg:px-16"
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="relative overflow-hidden rounded-[32px] border border-blue-900/20 bg-[#0B1120] px-7 py-10 text-white shadow-2xl sm:px-12 sm:py-14 lg:px-16"
         >
           <Image
             src={topSection.bannerImage}
             alt={topSection.title}
             fill
             sizes="100vw"
-            className="object-cover opacity-30"
+            className="object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A8A]/95 via-[#0B1120]/85 to-[#0B1120]/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A8A]/95 via-[#0B1120]/90 to-[#0B1120]/75" />
 
           <div className="relative z-10 grid items-center gap-8 lg:grid-cols-[1fr_auto]">
             <div className="max-w-2xl">
@@ -148,48 +151,44 @@ export default function Footer() {
                 {topSection.description}
               </p>
 
-              <div className="mt-5 flex flex-wrap items-center gap-5 text-xs font-bold text-white">
-                {topSection.badges.map((badge) => {
-                  const BadgeIcon = badgeIcons[badge.icon] || ShieldCheck;
-                  return (
-                    <span
-                      key={badge.label}
-                      className="inline-flex items-center gap-1.5"
-                    >
-                      <BadgeIcon size={15} className="text-[#FB923C]" />
-                      {badge.label}
-                    </span>
-                  );
-                })}
-              </div>
             </div>
 
-            <div className="flex flex-col items-start gap-3 sm:flex-row lg:flex-col lg:items-end">
+            <div className="flex flex-col items-start gap-4 sm:flex-row lg:flex-col lg:items-end">
               <a
                 href={topSection.button.href}
-                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#EA580C] px-7 py-4 text-sm font-bold text-white shadow-xl shadow-orange-600/25 transition-all duration-300 hover:bg-white hover:text-[#0B1120]"
+                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#EA580C] px-4 py-3 text-sm font-bold text-white shadow-xl shadow-orange-600/30 transition-all duration-300 hover:bg-white hover:text-[#0B1120]"
               >
                 {topSection.button.label}
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:rotate-45">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:rotate-45">
                   <ArrowUpRight size={17} />
                 </span>
               </a>
-              <span className="text-xs text-blue-200">
-                {topSection.hotlinePrefix}{" "}
-                <strong className="font-mono text-white">
-                  {topSection.hotlineNumber}
-                </strong>
-              </span>
+
+              {topSection.hotlinePrefix && (
+                <a
+                  href={topSection.hotlineNumber}
+                  className="group lg:w-full flex justify-center items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-lg font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
+                >
+                  <span className=" duration-300 flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C]/10 text-[#EA580C] transition-colors group-hover:bg-[#EA580C] group-hover:text-white">
+                    <Phone size={13} />
+                  </span>
+
+                  <span className="font-mono text-sm tracking-tight">
+                    {topSection.hotlineNumber}
+                  </span>
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* ================= MAIN FOOTER ================= */}
+      {/* ================= REFINED 3-COLUMN MAIN FOOTER WITH ALL TAB HEADINGS ================= */}
       <div className="relative mx-auto max-w-[1440px] px-5 pt-14 sm:px-8 lg:px-16">
-        <div className="grid gap-10 border-b border-slate-300/80 pb-8 md:grid-cols-2 lg:grid-cols-[1.4fr_0.9fr_1fr_1.2fr]">
-          {/* BRAND COLUMN */}
+        <div className="grid gap-10 border-b border-slate-200 pb-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.3fr]">
+          {/* TAB 1: BRAND & COMPANY */}
           <div>
+
             <a
               href={mainSection.navigation.links[0]?.href || "#home"}
               className="inline-block"
@@ -203,15 +202,17 @@ export default function Footer() {
               />
             </a>
 
-            <p className="mt-5 max-w-sm text-sm leading-6 text-slate-600">
+            <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">
               {mainSection.brand.description}
             </p>
 
-            <h3 className="mb-3.5 mt-6 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#1E3A8A]">
+            {/* Social Links Subheading */}
+            <h4 className="mb-3 mt-6 flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#1E3A8A]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1E3A8A]" />
               {mainSection.brand.socialTitle}
-            </h3>
+            </h4>
 
-            {/* LinkedIn, Instagram, Facebook & YouTube Icons */}
+            {/* Social Icons */}
             <div className="flex flex-wrap gap-2.5">
               {mainSection.brand.socialLinks.map((item) => (
                 <a
@@ -220,7 +221,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-[#1E3A8A] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EA580C] hover:bg-[#EA580C] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#1E3A8A] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EA580C] hover:bg-[#EA580C] hover:text-white"
                 >
                   <SocialPlatformIcon icon={item.icon} />
                 </a>
@@ -228,13 +229,14 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* EXPLORE COLUMN */}
+          {/* TAB 2: SITE DIRECTORY */}
           <div>
-            <h3 className="mb-5 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
+            <h3 className="mb-5 flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
+              <span className="h-2 w-2 rounded-full bg-[#EA580C]" />
               {mainSection.navigation.title}
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
               {mainSection.navigation.links.map((item) => (
                 <li key={item.label}>
                   <a
@@ -249,38 +251,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CAPABILITIES COLUMN */}
+          {/* TAB 3: GLOBAL HQ & ESTIMATING */}
           <div>
-            <h3 className="mb-5 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
-              {mainSection.programs.title}
-            </h3>
-
-            <ul className="space-y-3">
-              {mainSection.programs.links.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="group inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#EA580C]"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#1E3A8A] opacity-40 transition-all group-hover:w-3 group-hover:opacity-100" />
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* CONTACT COLUMN */}
-          <div>
-            <h3 className="mb-4 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
+            <h3 className="mb-5 flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider text-[#0B1120]">
+              <span className="h-2 w-2 rounded-full bg-[#EA580C]" />
               {mainSection.contact.title}
             </h3>
 
-            <p className="mb-5 text-xs leading-5 text-slate-600">
+            <p className="mb-3 text-xs leading-5 text-slate-600">
               {mainSection.contact.description}
             </p>
 
-            <div className="space-y-4">
+
+            <div className="space-y-4.5 mt-5">
               {mainSection.contact.items.map((item) => {
                 const Icon = contactIcons[item.icon];
                 if (!Icon) return null;
@@ -291,7 +274,7 @@ export default function Footer() {
                     href={item.href}
                     className="group flex items-start gap-3.5"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-[#EA580C] shadow-sm transition-colors group-hover:border-[#EA580C] group-hover:bg-[#EA580C] group-hover:text-white">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#EA580C] shadow-sm transition-colors group-hover:border-[#EA580C] group-hover:bg-[#EA580C] group-hover:text-white">
                       <Icon size={15} />
                     </span>
 
@@ -299,7 +282,6 @@ export default function Footer() {
                       <span className="block font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400">
                         {item.label}
                       </span>
-
                       <span className="break-words text-xs font-bold text-[#0B1120] transition-colors group-hover:text-[#EA580C]">
                         {item.value}
                       </span>
@@ -308,28 +290,18 @@ export default function Footer() {
                 );
               })}
             </div>
-
-            <a
-              href={mainSection.contact.button.href}
-              className="group mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E3A8A] hover:text-[#EA580C]"
-            >
-              {mainSection.contact.button.label}
-              <ArrowRight
-                size={15}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </a>
           </div>
         </div>
 
         {/* ================= BOTTOM BAR ================= */}
-        <div className="flex flex-col gap-4 pt-3 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-slate-600">{bottomSection.copyright}</p>         
+        <div className="flex flex-col gap-4 pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs text-slate-500">{bottomSection.copyright}</p>
+
 
           <a
             href={bottomSection.backToTop.href}
             aria-label={bottomSection.backToTop.label}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-[#0B1120] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EA580C] hover:bg-[#EA580C] hover:text-white"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0B1120] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EA580C] hover:bg-[#EA580C] hover:text-white"
           >
             <ArrowUp size={17} />
           </a>

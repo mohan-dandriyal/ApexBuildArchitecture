@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/85 via-transparent to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/85 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1E3A8A] px-3 py-1 font-bold">
                     <ShieldCheck size={13} className="text-[#FB923C]" />
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
                   <span className="rounded-full bg-[#EA580C] px-3 py-1 font-mono font-bold">
                     {activeTestimonial.projectValue}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Right: Concise Executive Quote & Avatar */}
@@ -121,8 +121,8 @@ export default function TestimonialsSection() {
                   )}
                 </div>
 
-                <blockquote className="mt-4 font-display text-2xl font-bold leading-snug text-[#0B1120] sm:text-3xl">
-                  &ldquo;{activeTestimonial.quote}&rdquo;
+                <blockquote className="mt-4 font-display leading-snug text-[#0B1120] sm:text-lg">
+                  &ldquo;{activeTestimonial.quote} { " "} {activeTestimonial.quote}&rdquo;
                 </blockquote>
 
                 <div className="mt-6 flex items-center gap-4 border-t border-slate-100 pt-5">

@@ -99,13 +99,46 @@
   },
   "about": {
     "sectionId": "about",
-    "eyebrow": "ABOUT APEXBUILD",
+    "eyebrow": "COMPANY ABOUT",
     "heading": {
       "prefix": "Shaping Skylines With",
       "accent": "Precision",
       "suffix": "& Vision."
     },
-    "intro": "25+ years of structural mastery across commercial towers, civil bridges, and custom architectural estates.",
+    "intro": "Turnkey engineering and design-build contracting led by licensed P.E. and AIA principals since 1999.",
+    "story": "ApexBuild integrates licensed P.E. structural design, advanced 5D BIM digital twins, and 450+ self-performed master trades to deliver iconic landmarks with zero clash orders, locked GMP budgets, and century-grade durability.",
+    "primaryImage": {
+      "src": "/assets/images/bim-engineers.webp",
+      "alt": "ApexBuild site engineers reviewing structural plans"
+    },
+    "secondaryImage": {
+      "src": "/assets/images/team-2.webp",
+      "alt": "Chief structural officer on site"
+    },
+    "experienceBadge": {
+      "value": "25+",
+      "label": "YEARS",
+      "subtext": "OF EXPERIENCE"
+    },
+    "specialServicesTitle": "Specialized Building Services:",
+    "checklist": [
+      {
+        "id": "1",
+        "label": "5D BIM Clash Detection 24/7"
+      },
+      {
+        "id": "2",
+        "label": "10-Year Structural Warranty"
+      },
+      {
+        "id": "3",
+        "label": "Guaranteed Maximum Price (GMP)"
+      },
+      {
+        "id": "4",
+        "label": "Reliable & Experienced Team"
+      }
+    ],
     "gallery": [
       {
         "src": "/assets/images/bim-engineers.webp",
@@ -128,69 +161,27 @@
         "caption": "LEED Platinum Standard"
       }
     ],
-    "experienceBadge": {
-      "value": "25+",
-      "label": "Years of Excellence",
-      "subtext": "Top 15 ENR National Contractor"
-    },
-    "pillars": [
-      {
-        "id": "philosophy",
-        "label": "5D BIM Precision",
-        "title": "Digital Twins Before Groundbreaking",
-        "description": "Every beam and curtain wall is simulated in 5D BIM to guarantee zero clashes and locked budgets.",
-        "image": "/assets/images/hero-3.webp",
-        "metrics": [
-          { "label": "BIM Clash Accuracy", "value": 99 },
-          { "label": "On-Budget Delivery", "value": 98 }
-        ],
-        "highlights": [
-          "5D Digital Twin Modeling",
-          "In-House Structural P.E. Leads",
-          "Direct Mill Steel Procurement"
-        ]
-      },
-      {
-        "id": "safety",
-        "label": "Zero-Harm Safety",
-        "title": "OSHA Platinum Site Telemetry",
-        "description": "Drone LiDAR scans and IoT structural sensors protect our crews and surrounding communities 24/7.",
-        "image": "/assets/images/bim-engineers.webp",
-        "metrics": [
-          { "label": "OSHA Safety Score", "value": 100 },
-          { "label": "Subcontractor Vetting", "value": 98 }
-        ],
-        "highlights": [
-          "0.42 EMR Safety Rating",
-          "Daily Drone LiDAR Scans",
-          "Dedicated Site Safety Directors"
-        ]
-      },
-      {
-        "id": "sustainability",
-        "label": "Green Building",
-        "title": "Low-Carbon Concrete & Mass Timber",
-        "description": "Carbon-cured concrete and solar-active facades cut building energy consumption by up to 45%.",
-        "image": "/assets/images/hero-4.webp",
-        "metrics": [
-          { "label": "LEED Gold/Platinum Rate", "value": 96 },
-          { "label": "Recycled Steel Usage", "value": 92 }
-        ],
-        "highlights": [
-          "Carbon-Cured Concrete",
-          "Net-Zero Envelope Systems",
-          "10-Year Structural Warranty"
-        ]
-      }
+    "stats": [
+      { "value": "25+", "label": "Years in Business", "sub": "Founded in 1999" },
+      { "value": "480+", "label": "Landmarks Completed", "sub": "Commercial & Civil" },
+      { "value": "$3.4B", "label": "Delivered Volume", "sub": "Locked GMP Value" },
+      { "value": "100%", "label": "Safety Compliance", "sub": "0.42 EMR Score" }
+    ],
+    "accreditations": [
+      { "name": "ISO 9001:2015", "desc": "Quality System" },
+      { "name": "LEED Platinum", "desc": "Green Building" },
+      { "name": "OSHA VPP Star", "desc": "Elite Safety" },
+      { "name": "AIA & AGC", "desc": "National Member" }
     ],
     "founder": {
       "avatar": "/assets/images/team-1.webp",
       "name": "Marcus Vance, PE, AIA",
-      "role": "Founder & CEO"
+      "role": "Founder & CEO",
+      "quote": "We build structures designed not just to stand, but to inspire for a century."
     },
     "cta": {
-      "label": "Explore Services",
-      "href": "#service"
+      "label": "GET A QUOTE",
+      "href": "#contact"
     }
   },
   "services": {
@@ -264,45 +255,35 @@
   "whyChooseUs": {
     "sectionId": "why-choose-us",
     "eyebrow": "WHY CHOOSE US",
-    "heading": {
-      "prefix": "Built for",
-      "accent": "Certainty",
-      "suffix": "& Speed."
-    },
-    "intro": "Visual transparency, self-performed structural trades, and locked GMP contracts.",
-    "verifiedLabel": "Audited Metric",
-    "reasons": [
+    "title": "Why Choose Us",
+    "description": "We provide best services with guarantee. We are the premier contractor in the country and always bring the highest structural engineering and delivery certainty to our clients. We never compromise on safety, tolerances, or guaranteed maximum pricing.",
+    "centerImage": "/assets/images/commercial.webp",
+    "leftFeatures": [
       {
-        "id": "gmp",
-        "title": "Locked GMP Pricing",
-        "description": "Zero surprise change orders via upfront 5D BIM quantity lock-in and direct steel mill procurement.",
-        "stat": "99.2%",
-        "statLabel": "Budget Accuracy",
-        "image": "/assets/images/commercial.webp"
+        "id": "local-experts",
+        "title": "Local Experts",
+        "subtitle": "Local Knowledge That Matters",
+        "description": "Our team has an in-depth understanding of regional structural codes, direct mill steel procurement, and geotechnical engineering."
       },
       {
-        "id": "cameras",
-        "title": "24/7 Live Site Cameras",
-        "description": "Real-time 4K drone LiDAR & telemetry portal accessible from any device worldwide.",
-        "stat": "100%",
-        "statLabel": "Live Visibility",
-        "image": "/assets/images/hero-1.webp"
+        "id": "personalized-service",
+        "title": "Personalized Service",
+        "subtitle": "Tailored To Your Needs",
+        "description": "We provide customized design-build engineering solutions with 450+ self-performed master trades to meet your unique project requirements."
+      }
+    ],
+    "rightFeatures": [
+      {
+        "id": "proven-success",
+        "title": "Proven Success",
+        "subtitle": "Your Success Is Our Priority",
+        "description": "A 25-year institutional track record of delivering 480+ landmark structures under Guaranteed Maximum Price contracts with zero claims."
       },
       {
-        "id": "trades",
-        "title": "In-House Iron & Concrete",
-        "description": "450+ direct master tradespeople accelerate critical path schedules without broker delays.",
-        "stat": "3.2x",
-        "statLabel": "Faster Mobilize",
-        "image": "/assets/images/bim-engineers.webp"
-      },
-      {
-        "id": "warranty",
-        "title": "10-Year Structural Warranty",
-        "description": "Comprehensive structural & building envelope protection with 24-month seasonal commissioning.",
-        "stat": "10 Yrs",
-        "statLabel": "Full Warranty",
-        "image": "/assets/images/hero-2.webp"
+        "id": "industry-recognition",
+        "title": "Industry Recognition",
+        "subtitle": "Trusted By Many",
+        "description": "We are proud members of national AGC, AIA, and USGBC associations, backing every structure with our comprehensive 10-year warranty."
       }
     ]
   },
@@ -342,10 +323,10 @@
         "title": "The Meridian Financial Tower",
         "category": "Commercial",
         "location": "Manhattan, NY",
-        "year": "2025",
-        "area": "1.42M Sq. Ft.",
-        "budget": "$410M",
-        "duration": "32 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "Vanguard REIT",
         "image": "/assets/images/commercial.webp"
       },
@@ -354,10 +335,10 @@
         "title": "Solstice Cliffside Villa",
         "category": "Residential",
         "location": "Big Sur, CA",
-        "year": "2026",
-        "area": "24,800 Sq. Ft.",
-        "budget": "$38M",
-        "duration": "22 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "Private Trust",
         "image": "/assets/images/hero-2.webp"
       },
@@ -366,10 +347,10 @@
         "title": "Cascadia Transit Bridge",
         "category": "Infrastructure",
         "location": "Seattle, WA",
-        "year": "2025",
-        "area": "2.8 Mile Span",
-        "budget": "$295M",
-        "duration": "36 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "PNW Transit",
         "image": "/assets/images/bridge-span.webp"
       },
@@ -378,10 +359,10 @@
         "title": "Aether Hyperscale AI Campus",
         "category": "Industrial",
         "location": "Phoenix, AZ",
-        "year": "2025",
-        "area": "850,000 Sq. Ft.",
-        "budget": "$220M",
-        "duration": "16 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "Aether Cloud",
         "image": "/assets/images/datacenter.webp"
       },
@@ -390,10 +371,10 @@
         "title": "The Ironworks Mixed-Use Hub",
         "category": "Commercial",
         "location": "Chicago, IL",
-        "year": "2024",
-        "area": "540,000 Sq. Ft.",
-        "budget": "$145M",
-        "duration": "24 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "Sterling Urban",
         "image": "/assets/images/hero-3.webp"
       },
@@ -402,10 +383,10 @@
         "title": "Kestrel Ridge Alpine Estate",
         "category": "Residential",
         "location": "Aspen, CO",
-        "year": "2025",
-        "area": "19,200 Sq. Ft.",
-        "budget": "$31M",
-        "duration": "20 Months",
+        "year": "",
+        "area": "",
+        "budget": "",
+        "duration": "",
         "client": "Kestrel Family",
         "image": "/assets/images/hero-4.webp"
       }
@@ -421,6 +402,8 @@
     },
     "intro": "Licensed P.E. and AIA principals leading every structure.",
     "focusLabel": "Specialty",
+    "showMoreLabel": "Show More Members",
+    "showLessLabel": "Show Less",
     "careersBanner": {
       "highlight": "Join our engineering studio",
       "text": "in New York, Austin, and Seattle.",
@@ -463,6 +446,24 @@
         "specialty": "Architectural Concrete & Villas",
         "bio": "Crafts museum-grade private residences from Big Sur to Aspen.",
         "image": "/assets/images/team-4.webp"
+      },
+      {
+        "id": "sarah-jenkins",
+        "name": "Sarah Jenkins, LEED AP",
+        "role": "VP of Sustainable Architecture",
+        "credentials": "M.Arch, UC Berkeley",
+        "specialty": "Net-Zero Envelopes & Mass Timber",
+        "bio": "Specializes in carbon-neutral structural envelopes and LEED Platinum certifications.",
+        "image": "/assets/images/team-5.webp"
+      },
+      {
+        "id": "alexander-wright",
+        "name": "Alexander Wright, SE, PE",
+        "role": "Chief Civil & Transit Engineer",
+        "credentials": "M.S. Civil Eng., Columbia",
+        "specialty": "Long-Span Bridges & Transit Hubs",
+        "bio": "Over 20 years leading heavy civil transit infrastructure and seismic engineering.",
+        "image": "/assets/images/team-6.webp"
       }
     ]
   },
@@ -589,7 +590,7 @@
   },
   "contact": {
     "sectionId": "contact",
-    "eyebrow": "START YOUR PROJECT",
+    "eyebrow": "START YOUR PROJECT INQUIRY",
     "heading": {
       "prefix": "Request a",
       "accent": "24-Hour",

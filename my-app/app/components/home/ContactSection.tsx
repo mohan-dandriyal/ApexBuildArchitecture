@@ -81,7 +81,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, ease }}
             className="flex flex-col justify-between gap-4 lg:col-span-5"
           >
-            <div className="space-y-3.5">
+            <div className="space-y-6">
               <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#1E3A8A]">
                 {contact.officesTitle}
               </h3>
@@ -123,25 +123,6 @@ export default function ContactSection() {
               })}
             </div>
 
-            {/* Direct Guarantees Strip */}
-            <div className="grid grid-cols-2 gap-3.5 rounded-2xl border border-blue-900/15 bg-gradient-to-r from-[#1E3A8A] to-[#0B1120] p-5 text-white shadow-lg">
-              {contact.directMetrics.map((metric) => {
-                const Icon = metricIconMap[metric.icon] || Clock;
-                return (
-                  <div key={metric.label} className="flex items-start gap-2.5">
-                    <Icon className="mt-0.5 h-5 w-5 shrink-0 text-[#FB923C]" />
-                    <div>
-                      <p className="font-display text-sm font-bold text-white">
-                        {metric.value}
-                      </p>
-                      <p className="text-[11px] text-blue-200">
-                        {metric.label}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
           </motion.div>
 
           {/* Right Column: Clean 4-Field Contact Form (Name, Email, Phone, Message) */}
@@ -248,9 +229,9 @@ export default function ContactSection() {
                   </div>
 
                   <div className="flex flex-col items-start justify-between gap-4 border-t border-slate-200 pt-4 sm:flex-row sm:items-center">
-                    <span className="text-xs font-medium text-slate-500">
+                    {/* <span className="text-xs font-medium text-slate-500">
                       {contact.form.confidentialNote}
-                    </span>
+                    </span> */}
 
                     <button
                       type="submit"

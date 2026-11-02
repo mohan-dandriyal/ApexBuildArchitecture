@@ -68,11 +68,11 @@ export default function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/85 via-[#0B1120]/20 to-transparent" />
 
                 {/* Top Metric Pill */}
-                <div className="absolute right-4 top-4">
+                {/* <div className="absolute right-4 top-4">
                   <span className="rounded-full border border-white/25 bg-white/95 px-3.5 py-1 font-mono text-[11px] font-bold text-[#1E3A8A] shadow-sm backdrop-blur-md">
                     {service.metric}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Title Overlay on Image */}
                 <div className="absolute inset-x-4 bottom-4">
@@ -93,7 +93,7 @@ export default function ServicesSection() {
                   </p>
 
                   {/* Compact Deliverable Chips */}
-                  <div className="mt-4 flex flex-wrap gap-1.5">
+                  {/* <div className="mt-4 flex flex-wrap gap-1.5">
                     {service.deliverables.map((chip) => (
                       <span
                         key={chip}
@@ -102,7 +102,7 @@ export default function ServicesSection() {
                         {chip}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mt-5 border-t border-slate-100 pt-3.5">

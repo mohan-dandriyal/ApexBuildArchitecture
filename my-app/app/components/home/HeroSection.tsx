@@ -71,7 +71,7 @@ export default function HeroSection() {
           );
         })}
 
-        {/* Clean gradient overlay so the full-screen image stays vivid while text remains crisp */}
+        {/* Clean gradient overlay for high contrast and readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120]/85 via-[#0B1120]/45 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/80 via-transparent to-[#0B1120]/30" />
       </div>
@@ -104,11 +104,11 @@ export default function HeroSection() {
                 {slide.shortDesc}
               </p>
 
-              {/* Primary & Secondary CTAs */}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              {/* Primary & Secondary CTAs (Commented as requested) */}
+              {/* <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href={hero.primaryCta.href}
-                  className="group inline-flex items-center gap-3.5 rounded-full bg-[#EA580C] py-2.5 pl-7 pr-3.5 text-sm font-bold text-white shadow-xl shadow-orange-600/30 transition-all duration-300 hover:bg-[#1E3A8A]"
+                  className="group inline-flex items-center gap-3.5 rounded-full bg-[#EA580C] py-3.5 pl-7 pr-3.5 text-sm font-bold text-white shadow-xl shadow-orange-600/30 transition-all duration-300 hover:bg-[#1E3A8A]"
                 >
                   <span>{hero.primaryCta.label}</span>
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:rotate-45">
@@ -118,12 +118,12 @@ export default function HeroSection() {
 
                 <a
                   href={hero.secondaryCta.href}
-                  className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-md transition-all hover:bg-white hover:text-[#0B1120]"
+                  className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all hover:bg-white hover:text-[#0B1120]"
                 >
                   <Building2 size={16} className="text-[#FB923C]" />
                   <span>{hero.secondaryCta.label}</span>
                 </a>
-              </div>
+              </div> */}
             </motion.div>
           </AnimatePresence>
         </div>
