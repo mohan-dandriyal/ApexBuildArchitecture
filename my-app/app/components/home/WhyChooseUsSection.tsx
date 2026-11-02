@@ -78,7 +78,7 @@ export default function WhyChooseUsSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease }}
-              className="flex justify-center lg:col-span-4"
+              className="lg:flex justify-center hidden lg:col-span-4"
             >
               <div className="relative h-[440px] w-full max-w-[340px] overflow-hidden rounded-t-[140px] rounded-b-[40px] border-4 border-white shadow-2xl shadow-slate-900/15 sm:h-[490px]">
                 {/* Soft warm gradient backdrop like reference image */}
