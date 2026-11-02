@@ -60,7 +60,7 @@ export default function WhyChooseUsSection() {
                   type="button"
                   onClick={() => setActiveReasonIdx(idx)}
                   onMouseEnter={() => setActiveReasonIdx(idx)}
-                  className={`group flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl border p-4 text-left transition-all duration-300 sm:p-5 ${
+                  className={`group sm:flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl border p-4 text-left transition-all duration-300 sm:p-5 ${
                     isSelected
                       ? "border-[#EA580C] bg-[#1E3A8A] text-white shadow-xl shadow-blue-950/10"
                       : "border-slate-200 bg-[#F8FAFC] text-[#0B1120] hover:border-[#1E3A8A]/40 hover:bg-white"
@@ -89,7 +89,7 @@ export default function WhyChooseUsSection() {
                         {reason.title}
                       </h3>
                       <p
-                        className={`mt-0.5 line-clamp-1 text-xs ${
+                        className={`mt-0.5 sm:line-clamp-1 text-xs ${
                           isSelected ? "text-blue-100" : "text-slate-500"
                         }`}
                       >
@@ -98,7 +98,7 @@ export default function WhyChooseUsSection() {
                     </div>
                   </div>
 
-                  <div className="shrink-0 text-right">
+                  <div className="shrink-0 text-right hidden sm:block">
                     <span
                       className={`block font-display text-2xl font-extrabold sm:text-3xl ${
                         isSelected ? "text-[#FB923C]" : "text-[#1E3A8A]"
