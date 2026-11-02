@@ -72,7 +72,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10">
           {/* Left Column: Photo-Backed Regional Studio Cards */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -133,7 +133,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, ease }}
             className="flex lg:col-span-7"
           >
-            <div className="flex w-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-xl shadow-blue-950/5 sm:p-9">
+            <div className="flex w-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-xl shadow-blue-950/5 sm:p-6">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}

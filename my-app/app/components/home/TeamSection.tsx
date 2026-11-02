@@ -119,7 +119,7 @@ export default function TeamSection() {
                   className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-[#F8FAFC] p-3 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EA580C] hover:bg-white hover:shadow-2xl hover:shadow-blue-950/10"
                 >
                   {/* Tall Portrait Card */}
-                  <div className="relative h-76 w-full overflow-hidden rounded-2xl">
+                  <div className="relative w-full overflow-hidden rounded-2xl">
                     <Image
                       src={member.image}
                       alt={member.name}
