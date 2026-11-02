@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
 
 import headerData from "@/app/data/header.json";
+import { PrimaryThemeButton } from "./ThemeButtons";
 
 const { header } = headerData;
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -160,7 +161,7 @@ export default function Header() {
       >
 
         {/* Main Navigation Bar */}
-        <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-16">
+        <div className="mx-auto flex h-[85px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-16">
           <a
             href={navigation.navItems[0]?.href || "#home"}
             onClick={(e) =>
@@ -175,7 +176,7 @@ export default function Header() {
               width={logo.width}
               height={logo.height}
               priority
-              className="h-auto w-36 object-contain sm:w-40"
+              className="h-auto w-42 object-contain sm:w-65"
             />
           </a>
 
@@ -192,18 +193,17 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="group relative px-3.5 py-2.5 text-[13.5px] font-semibold tracking-tight transition-colors duration-300"
+                  className="group relative px-3 py-2.5 text-[13.5px] font-semibold tracking-tight transition-colors duration-300"
                   style={{
                     color: isActive ? "#1E3A8A" : theme.muted,
                   }}
                 >
                   {item.label}
                   <span
-                    className={`absolute bottom-1 left-3.5 h-[2.5px] rounded-full bg-[#EA580C] transition-all duration-300 ${
-                      isActive
+                    className={`absolute bottom-1 left-3.5 h-[2.5px] rounded-full bg-[#EA580C] transition-all duration-300 ${isActive
                         ? "w-[calc(100%-28px)]"
                         : "w-0 group-hover:w-[calc(100%-28px)]"
-                    }`}
+                      }`}
                   />
                 </a>
               );
@@ -215,28 +215,23 @@ export default function Header() {
             {"helpline" in header && header.helpline && (
               <a
                 href={(header.helpline as { href: string; number: string }).href}
-                className="group flex items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-2 text-xs font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
+                className="group flex items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] pr-6 pl-2 py-2.5 text-sm font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C]/10 text-[#EA580C] transition-colors group-hover:bg-[#EA580C] group-hover:text-white">
                   <Phone size={13} />
                 </span>
-                <span className="font-mono text-xs tracking-tight">
+                <span className="font-mono text-sm tracking-tight">
                   {(header.helpline as { href: string; number: string }).number}
                 </span>
               </a>
             )}
 
             {cta.enabled && (
-              <a
-                href={cta.btnLink}
-                onClick={(e) => handleNavClick(e, cta.btnLink)}
-                className="group inline-flex items-center gap-3.5 rounded-full bg-[#1E3A8A] py-2 pl-6 pr-2 text-sm font-bold text-white shadow-lg shadow-blue-900/15 transition-all duration-300 hover:bg-[#EA580C]"
-              >
-                {cta.btnText}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C] text-white transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/20">
-                  <ArrowUpRight size={17} />
-                </span>
-              </a>
+              <PrimaryThemeButton
+               text={cta.btnText} 
+               href={cta.btnLink}
+               Icon={ArrowUpRight} 
+               className="" />
             )}
           </div>
 
@@ -321,11 +316,10 @@ export default function Header() {
                         className="group flex items-center justify-between border-b border-slate-100 py-4"
                       >
                         <span
-                          className={`font-display text-lg font-bold transition-colors duration-300 ${
-                            isActive
+                          className={`font-display text-lg font-bold transition-colors duration-300 ${isActive
                               ? "text-[#EA580C]"
                               : "text-[#0B1120] group-hover:text-[#1E3A8A]"
-                          }`}
+                            }`}
                         >
                           {item.label}
                         </span>

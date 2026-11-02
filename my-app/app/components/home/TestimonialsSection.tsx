@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
                   )}
                 </div>
 
-                <blockquote className="mt-4 font-display leading-snug text-[#0B1120] sm:text-lg">
+                <blockquote className="mt-4 text-sm  leading-6 text-slate-600">
                   &ldquo;{activeTestimonial.quote} { " "} {activeTestimonial.quote}&rdquo;
                 </blockquote>
 

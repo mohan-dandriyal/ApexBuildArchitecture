@@ -54,16 +54,12 @@
         {
           "label": "Testimonial",
           "href": "#testimonials"
-        },
-        {
-          "label": "Contact",
-          "href": "#contact"
         }
       ]
     },
     "cta": {
       "enabled": true,
-      "btnText": "Start Project",
+      "btnText": "Contact Now",
       "btnLink": "#contact",
       "icon": "arrow-up-right"
     },

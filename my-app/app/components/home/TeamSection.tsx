@@ -53,7 +53,7 @@ export default function TeamSection() {
         </motion.div>
 
         {/* Team Grid: Initial 4 stay permanently fixed; Only extra members animate in/out */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
           {/* First 4 Members: permanently rendered without reloading */}
           {initialMembers.map((member, index) => (
             <motion.div
@@ -168,7 +168,7 @@ export default function TeamSection() {
             <button
               type="button"
               onClick={() => setShowAll((prev) => !prev)}
-              className="group inline-flex items-center gap-2.5 rounded-full border border-slate-300 bg-[#f8fafc] duration-300 px-7 py-3 text-sm font-bold capitalize tracking-wider text-[#0b1120] shadow-md transition-all cursor-pointer hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C]"
+              className="group inline-flex items-center gap-2.5 rounded-full border border-slate-300 bg-[#f8fafc] duration-300 pl-6 pr-2 py-2.5 text-sm font-bold capitalize tracking-wider text-[#0b1120]/90 shadow-md transition-all cursor-pointer hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C]"
             >
               <span>{showAll ? team.showLessLabel : team.showMoreLabel}</span>
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C]/30 text-[#EA580C] transition-colors group-hover:bg-[#EA580C] group-hover:text-white">

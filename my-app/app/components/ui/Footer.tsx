@@ -156,7 +156,7 @@ export default function Footer() {
             <div className="flex flex-col items-start gap-4 sm:flex-row lg:flex-col lg:items-end">
               <a
                 href={topSection.button.href}
-                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#EA580C] px-4 py-3 text-sm font-bold text-white shadow-xl shadow-orange-600/30 transition-all duration-300 hover:bg-white hover:text-[#0B1120]"
+                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#EA580C] pl-6 pe-2 py-2.5 text-sm font-bold text-white shadow-xl shadow-orange-600/30 transition-all duration-300 hover:bg-white hover:text-[#0B1120]"
               >
                 {topSection.button.label}
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:rotate-45">
@@ -167,7 +167,7 @@ export default function Footer() {
               {topSection.hotlinePrefix && (
                 <a
                   href={topSection.hotlineNumber}
-                  className="group lg:w-full flex justify-center items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-lg font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
+                  className="group lg:w-full flex justify-center items-center gap-2.5 rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-2.5 text-lg font-bold text-[#0B1120] transition-all duration-300 hover:border-[#EA580C] hover:bg-white hover:text-[#EA580C] shadow-sm"
                 >
                   <span className=" duration-300 flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C]/10 text-[#EA580C] transition-colors group-hover:bg-[#EA580C] group-hover:text-white">
                     <Phone size={13} />
@@ -198,7 +198,7 @@ export default function Footer() {
                 alt={mainSection.brand.logoAlt}
                 width={180}
                 height={54}
-                className="h-auto w-40 object-contain"
+                className="h-auto w-45 sm:w-70 object-contain"
               />
             </a>
 
@@ -279,7 +279,7 @@ export default function Footer() {
                     </span>
 
                     <span className="min-w-0">
-                      <span className="block font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                      <span className="block font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">
                         {item.label}
                       </span>
                       <span className="break-words text-xs font-bold text-[#0B1120] transition-colors group-hover:text-[#EA580C]">

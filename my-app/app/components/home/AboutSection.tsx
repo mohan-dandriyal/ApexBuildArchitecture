@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { landingData } from "@/app/types/landingData";
+import { PrimaryThemeButton } from "../ui/ThemeButtons";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -160,9 +161,9 @@ export default function AboutSection() {
               {about.checklist.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-2.5 text-xs font-semibold text-slate-700 sm:text-[13px]"
+                  className="flex items-center gap-2.5 text-xs font-semibold text-[slate-700] sm:text-[13px]"
                 >
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#EA580C]/30 text-[#EA580C]">
                     <CheckCircle2 size={14} className="stroke-[2.5]" />
                   </span>
                   <span>{item.label}</span>
@@ -172,15 +173,15 @@ export default function AboutSection() {
 
             {/* Primary Action Button */}
             <div className="mt-8">
-              <a
-                href={about.cta.href}
-                className="group inline-flex items-center gap-3 rounded-full bg-[#1E3A8A] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-xl shadow-blue-950/15 transition-all duration-300 hover:bg-[#EA580C]/80 hover:shadow-orange-600/25"
-              >
-                <span>{about.cta.label}</span>
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EA580C] transition-transform duration-300 group-hover:rotate-45">
-                  <ArrowUpRight size={14} />
-                </span>
-              </a>
+              {
+                about.cta.label && (
+                  <PrimaryThemeButton
+                    text={about.cta.label}
+                    href={about.cta.href}
+                    Icon={ArrowUpRight}
+                    className="" />
+                )
+              }
             </div>
           </motion.div>
         </div>
@@ -198,9 +199,8 @@ export default function AboutSection() {
               {about.stats.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className={`group relative overflow-hidden p-6 text-center transition-all duration-300 hover:-translate-y-1 border-slate-200/90 hover:bg-white hover:shadow-blue-950/5 ${
-                    i < 3 ? "lg:border-r" : ""
-                  }`}
+                  className={`group relative overflow-hidden p-6 text-center transition-all duration-300 hover:-translate-y-1 border-slate-200/90 hover:bg-white hover:shadow-blue-950/5 ${i < 3 ? "lg:border-r" : ""
+                    }`}
                 >
                   <span className="block font-display text-3xl font-extrabold text-[#1E3A8A] transition-colors group-hover:text-[#EA580C] sm:text-4xl lg:text-5xl">
                     <StatCounter value={stat.value} />
