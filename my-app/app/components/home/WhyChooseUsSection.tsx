@@ -80,7 +80,7 @@ export default function WhyChooseUsSection() {
               transition={{ duration: 0.7, ease }}
               className="lg:flex justify-center hidden lg:col-span-4"
             >
-              <div className="relative h-[440px] w-full max-w-[340px] overflow-hidden rounded-t-[140px] rounded-b-[40px] border-4 border-white shadow-2xl shadow-slate-900/15 sm:h-[490px]">
+              <div className="relative h-[440px] w-full max-w-[340px] overflow-hidden rounded-t-[190px] rounded-b-[20px] border-4 border-white shadow-2xl shadow-slate-900/15 sm:h-[490px]">
                 {/* Soft warm gradient backdrop like reference image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-50 via-rose-50/40 to-amber-50/30" />
 

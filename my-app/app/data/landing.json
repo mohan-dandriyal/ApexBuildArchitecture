@@ -32,7 +32,7 @@
         "area": "1.4M Sq. Ft.",
         "year": "2025",
         "mainImage": "/assets/images/hero-1.webp",
-        "detailImage": "/assets/images/commercial.webp"
+        "detailImage": "/assets/images/hero-1.webp"
       },
       {
         "id": "solstice-villa",
@@ -45,7 +45,7 @@
         "area": "28,500 Sq. Ft.",
         "year": "2026",
         "mainImage": "/assets/images/hero-2.webp",
-        "detailImage": "/assets/images/residential.webp"
+        "detailImage": "/assets/images/hero-2.webp"
       },
       {
         "id": "cascadia-bridge",
@@ -58,7 +58,7 @@
         "area": "2.8 Mile Span",
         "year": "2025",
         "mainImage": "/assets/images/hero-3.webp",
-        "detailImage": "/assets/images/bridge.webp"
+        "detailImage": "/assets/images/hero-3.webp"
       },
       {
         "id": "alpine-estate",
@@ -71,29 +71,29 @@
         "area": "19,200 Sq. Ft.",
         "year": "2025",
         "mainImage": "/assets/images/hero-4.webp",
-        "detailImage": "/assets/images/renovation.webp"
+        "detailImage": "/assets/images/hero-4.webp"
       }
     ],
     "stats": [
       {
         "value": "25+",
         "label": "Years Experience",
-        "image": "/assets/images/bim-engineers.webp"
+        "image": "/assets/images/hero-1.webp"
       },
       {
         "value": "480+",
         "label": "Landmarks Built",
-        "image": "/assets/images/commercial.webp"
+        "image": "/assets/images/hero-2.webp"
       },
       {
         "value": "$3.4B",
         "label": "Project Volume",
-        "image": "/assets/images/bridge-span.webp"
+        "image": "/assets/images/hero-3.webp"
       },
       {
         "value": "100%",
         "label": "Safety Record",
-        "image": "/assets/images/industrial.webp"
+        "image": "/assets/images/hero-4.webp"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "alt": "ApexBuild site engineers reviewing structural plans"
     },
     "secondaryImage": {
-      "src": "/assets/images/team-2.webp",
+      "src": "/assets/images/about.webp",
       "alt": "Chief structural officer on site"
     },
     "experienceBadge": {
@@ -146,17 +146,17 @@
         "caption": "5D BIM Digital Twin"
       },
       {
-        "src": "/assets/images/hero-1.webp",
+        "src": "/assets/images/about-gallery-crane.webp",
         "alt": "High-rise crane operations at sunrise",
         "caption": "450+ In-House Trades"
       },
       {
-        "src": "/assets/images/hero-2.webp",
+        "src": "/assets/images/about-gallery-villa.webp",
         "alt": "Finished architectural concrete villa",
         "caption": "Museum-Grade Craft"
       },
       {
-        "src": "/assets/images/datacenter.webp",
+        "src": "/assets/images/about-gallery-facility.webp",
         "alt": "Precision industrial engineering",
         "caption": "LEED Platinum Standard"
       }
@@ -174,7 +174,7 @@
       { "name": "AIA & AGC", "desc": "National Member" }
     ],
     "founder": {
-      "avatar": "/assets/images/team-1.webp",
+      "avatar": "/assets/images/founder.webp",
       "name": "Marcus Vance, PE, AIA",
       "role": "Founder & CEO",
       "quote": "We build structures designed not just to stand, but to inspire for a century."
@@ -201,7 +201,7 @@
         "title": "Commercial Skyscrapers",
         "subtitle": "Class-A Towers & Mixed-Use",
         "description": "Structural steel erection and unitized glass curtain walls for landmark urban towers.",
-        "image": "/assets/images/commercial.webp",
+        "image": "/assets/images/service-1.webp",
         "deliverables": ["Diagrid Steel", "Curtain Walls", "Smart MEP"],
         "metric": "180+ Towers"
       },
@@ -219,7 +219,7 @@
         "title": "Civil & Bridge Works",
         "subtitle": "Transit Spans & Deep Foundations",
         "description": "Cable-stayed bridges, marine caissons, and seismic-grade public infrastructure.",
-        "image": "/assets/images/bridge.webp",
+        "image": "/assets/images/service-3.webp",
         "deliverables": ["Secant Piling", "Segmental Spans", "Seismic Core"],
         "metric": "$1.4B Civil"
       },
@@ -237,7 +237,7 @@
         "title": "5D BIM & Pre-Construction",
         "subtitle": "Digital Twins & GMP Estimating",
         "description": "Virtual clash detection and value engineering that locks in budgets before site work.",
-        "image": "/assets/images/bim-engineers.webp",
+        "image": "/assets/images/service.webp",
         "deliverables": ["5D BIM Twin", "GMP Lock-In", "Soil Feasibility"],
         "metric": "18% Savings"
       },
@@ -257,7 +257,7 @@
     "eyebrow": "WHY CHOOSE US",
     "title": "Why Choose Us",
     "description": "We provide best services with guarantee. We are the premier contractor in the country and always bring the highest structural engineering and delivery certainty to our clients. We never compromise on safety, tolerances, or guaranteed maximum pricing.",
-    "centerImage": "/assets/images/commercial.webp",
+    "centerImage": "/assets/images/choosUs.webp",
     "leftFeatures": [
       {
         "id": "local-experts",
@@ -328,7 +328,7 @@
         "budget": "",
         "duration": "",
         "client": "Vanguard REIT",
-        "image": "/assets/images/commercial.webp"
+        "image": "/assets/images/project-1-1.webp"
       },
       {
         "id": "solstice-house",
@@ -340,7 +340,7 @@
         "budget": "",
         "duration": "",
         "client": "Private Trust",
-        "image": "/assets/images/hero-2.webp"
+        "image": "/assets/images/project-2.webp"
       },
       {
         "id": "cascadia-crossing",
@@ -352,7 +352,7 @@
         "budget": "",
         "duration": "",
         "client": "PNW Transit",
-        "image": "/assets/images/bridge-span.webp"
+        "image": "/assets/images/project-3-3.webp"
       },
       {
         "id": "aether-datacenter",
@@ -376,7 +376,7 @@
         "budget": "",
         "duration": "",
         "client": "Sterling Urban",
-        "image": "/assets/images/hero-3.webp"
+        "image": "/assets/images/project-5.webp"
       },
       {
         "id": "aspen-sanctuary",
@@ -388,7 +388,7 @@
         "budget": "",
         "duration": "",
         "client": "Kestrel Family",
-        "image": "/assets/images/hero-4.webp"
+        "image": "/assets/images/project-6.webp"
       }
     ]
   },
@@ -492,7 +492,7 @@
         "projectValue": "$410M High-Rise",
         "rating": 5,
         "avatar": "/assets/images/client-1.webp",
-        "projectImage": "/assets/images/commercial.webp"
+        "projectImage": "/assets/images/review-1.webp"
       },
       {
         "id": "test-2",
@@ -504,7 +504,7 @@
         "projectValue": "$38M Custom Estate",
         "rating": 5,
         "avatar": "/assets/images/client-2.webp",
-        "projectImage": "/assets/images/hero-2.webp"
+        "projectImage": "/assets/images/testimonal-2.webp"
       },
       {
         "id": "test-3",
@@ -516,7 +516,7 @@
         "projectValue": "$295M Civil Span",
         "rating": 5,
         "avatar": "/assets/images/client-3.webp",
-        "projectImage": "/assets/images/bridge-span.webp"
+        "projectImage": "/assets/images/review-2.webp"
       },
       {
         "id": "test-4",
@@ -528,7 +528,7 @@
         "projectValue": "$220M Data Center",
         "rating": 5,
         "avatar": "/assets/images/client-4.webp",
-        "projectImage": "/assets/images/datacenter.webp"
+        "projectImage": "/assets/images/testimonial-project-4.webp"
       }
     ]
   },
@@ -542,7 +542,7 @@
     },
     "intro": "Everything you need to know about GMP pricing, 5D BIM, and warranties.",
     "supportCard": {
-      "image": "/assets/images/bim-engineers.webp",
+      "image": "/assets/images/service-5.webp",
       "badge": "48-HOUR FEASIBILITY AUDIT",
       "title": "Talk to a Principal Structural Estimator",
       "description": "Send your schematic plans for a complimentary cost and schedule breakdown.",
@@ -606,7 +606,7 @@
         "subtext": "Headquarters & Structural Engineering Studio",
         "icon": "map-pin",
         "href": "#contact",
-        "image": "/assets/images/commercial.webp"
+        "image": "/assets/images/contact-hq.webp"
       },
       {
         "city": "Estimating & Inquiries",
@@ -615,7 +615,7 @@
         "subtext": "Direct Principal Estimator & Bid Desk",
         "icon": "mail",
         "href": "mailto:info@xyz.com",
-        "image": "/assets/images/hero-2.webp"
+        "image": "/assets/images/contact-email.webp"
       },
       {
         "city": "24/7 Engineering Line",
@@ -624,7 +624,7 @@
         "subtext": "Immediate Site & Project Consultation",
         "icon": "phone",
         "href": "tel:+1000000000",
-        "image": "/assets/images/bridge-span.webp"
+        "image": "/assets/images/faq.webp"
       }
     ],
     "directMetrics": [
