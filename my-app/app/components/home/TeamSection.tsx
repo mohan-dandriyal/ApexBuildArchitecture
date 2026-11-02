@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Award } from "lucide-react";
-import { landingData } from "@/app/data/landingData";
+import { landingData } from "@/app/types/landingData";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 

@@ -9,7 +9,7 @@ import {
   ChevronRight,
   Building2,
 } from "lucide-react";
-import { landingData } from "@/app/data/landingData";
+import { landingData } from "@/app/types/landingData";
 
 const smoothEase = [0.16, 1, 0.3, 1] as const;
 

@@ -347,17 +347,7 @@
         "budget": "$410M",
         "duration": "32 Months",
         "client": "Vanguard REIT",
-        "image": "/assets/images/commercial.webp",
-        "gallery": [
-          "/assets/images/hero-1.webp",
-          "/assets/images/hero-3.webp"
-        ],
-        "summary": "64-story LEED Platinum tower featuring a diagrid structural steel exoskeleton and acoustic triple-glazed facade.",
-        "highlights": [
-          "Diagrid steel cut tonnage by 18%",
-          "Delivered 6 weeks ahead of schedule",
-          "LEED Platinum Certified"
-        ]
+        "image": "/assets/images/commercial.webp"
       },
       {
         "id": "solstice-house",
@@ -369,17 +359,7 @@
         "budget": "$38M",
         "duration": "22 Months",
         "client": "Private Trust",
-        "image": "/assets/images/hero-2.webp",
-        "gallery": [
-          "/assets/images/residential.webp",
-          "/assets/images/hero-4.webp"
-        ],
-        "summary": "Cantilevered board-formed concrete estate anchored 45 feet into coastal granite bedrock.",
-        "highlights": [
-          "42-ft ocean bluff cantilever",
-          "Geothermal radiant microgrid",
-          "2026 AIA Craftsmanship Award"
-        ]
+        "image": "/assets/images/hero-2.webp"
       },
       {
         "id": "cascadia-crossing",
@@ -391,17 +371,7 @@
         "budget": "$295M",
         "duration": "36 Months",
         "client": "PNW Transit",
-        "image": "/assets/images/bridge-span.webp",
-        "gallery": [
-          "/assets/images/bridge.webp",
-          "/assets/images/hero-3.webp"
-        ],
-        "summary": "Seismic-isolated cable-stayed transit crossing engineered for a 100-year service life.",
-        "highlights": [
-          "9.0-magnitude seismic resilience",
-          "Zero marine habitat impact",
-          "1.2M zero-incident work hours"
-        ]
+        "image": "/assets/images/bridge-span.webp"
       },
       {
         "id": "aether-datacenter",
@@ -413,17 +383,7 @@
         "budget": "$220M",
         "duration": "16 Months",
         "client": "Aether Cloud",
-        "image": "/assets/images/datacenter.webp",
-        "gallery": [
-          "/assets/images/industrial.webp",
-          "/assets/images/bim-engineers.webp"
-        ],
-        "summary": "Tier-IV mission-critical AI compute campus with 180MW substation and liquid cooling.",
-        "highlights": [
-          "Fast-track 16-month delivery",
-          "Zero-water thermal rejection",
-          "FF85 laser-screeded slabs"
-        ]
+        "image": "/assets/images/datacenter.webp"
       },
       {
         "id": "foundry-arts",
@@ -435,17 +395,7 @@
         "budget": "$145M",
         "duration": "24 Months",
         "client": "Sterling Urban",
-        "image": "/assets/images/hero-3.webp",
-        "gallery": [
-          "/assets/images/renovation.webp",
-          "/assets/images/commercial.webp"
-        ],
-        "summary": "1912 steel foundry adaptive reuse topped with a 22-story mass-timber overbuild.",
-        "highlights": [
-          "Preserved 1912 riveted trusses",
-          "8,400 tons CO2 sequestered",
-          "ULI Excellence Finalist"
-        ]
+        "image": "/assets/images/hero-3.webp"
       },
       {
         "id": "aspen-sanctuary",
@@ -457,17 +407,7 @@
         "budget": "$31M",
         "duration": "20 Months",
         "client": "Kestrel Family",
-        "image": "/assets/images/hero-4.webp",
-        "gallery": [
-          "/assets/images/hero-2.webp",
-          "/assets/images/residential.webp"
-        ],
-        "summary": "High-altitude Valser quartzite and heated structural glass compound at 9,400 ft.",
-        "highlights": [
-          "180 lbs/sq.ft snow load rating",
-          "Subterranean collector gallery",
-          "Year-round dome construction"
-        ]
+        "image": "/assets/images/hero-4.webp"
       }
     ]
   },
