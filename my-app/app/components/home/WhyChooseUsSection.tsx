@@ -23,7 +23,7 @@ export default function WhyChooseUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease }}
-          className="mb-12 flex flex-col justify-between gap-6 border-b border-slate-100 pb-8 lg:flex-row lg:items-center"
+          className="mb-10 flex flex-col justify-between gap-6 border-b border-slate-200/80 pb-8 lg:flex-row lg:items-center"
         >
           <div className="lg:max-w-md">
             {"eyebrow" in whyChooseUs && whyChooseUs.eyebrow && (
