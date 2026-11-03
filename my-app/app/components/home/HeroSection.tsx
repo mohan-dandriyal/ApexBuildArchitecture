@@ -39,7 +39,7 @@ export default function HeroSection() {
   return (
     <section
       id={hero.sectionId}
-      className="relative flex h-screen min-h-[640px] w-full flex-col justify-between overflow-hidden bg-[#0B1120] pt-28 pb-10 lg:pt-32 lg:pb-14"
+      className="relative flex md:h-screen min-h-[550px] w-full flex-col justify-between overflow-hidden bg-[#0B1120] pt-16 sm:pt-28 pb-5 lg:pt-32 lg:pb-14"
     >
       {/* ================= PRELOADED FULL-SCREEN SMOOTH IMAGE SLIDER ================= */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">

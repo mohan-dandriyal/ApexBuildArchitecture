@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex overflow-x-auto gap-2">
             {projects.categories.map((cat) => {
               const isActive = selectedCategory === cat;
               return (
