@@ -34,7 +34,7 @@ export default function ProjectsSection() {
           className="mb-10 flex flex-col justify-between gap-6 border-b border-slate-200 pb-6 lg:flex-row lg:items-end"
         >
           <div>
-            <span className="inline-flex items-center gap-2.5 font-mono text-xs font-bold tracking-[0.22em] text-[#EA580C]">
+            <span className="inline-flex items-center gap-2.5 font-mono text-[9px] sm:text-xs font-bold tracking-[0.22em] text-[#EA580C]">
               <span className="h-2 w-2 rounded-full bg-[#1E3A8A]" />
               {projects.eyebrow}
             </span>

@@ -135,7 +135,7 @@ export default function Footer() {
 
           <div className="relative z-10 grid items-center gap-8 lg:grid-cols-[1fr_auto]">
             <div className="max-w-2xl">
-              <span className="mb-3 inline-flex items-center gap-2.5 font-mono text-xs font-bold tracking-[0.22em] text-[#FB923C]">
+              <span className="mb-3 inline-flex items-center gap-2.5 font-mono text-[9px] sm:text-xs font-bold tracking-[0.22em] text-[#FB923C]">
                 <span className="h-2 w-2 rounded-full bg-[#EA580C]" />
                 {topSection.eyebrow}
               </span>
@@ -147,7 +147,7 @@ export default function Footer() {
                 </span>
               </h2>
 
-              <p className="mt-3 max-w-xl text-sm leading-6 text-blue-100 sm:text-base">
+              <p className="sm:mt-3 mt-2 max-w-xl text-sm leading-6 text-blue-100 sm:text-base">
                 {topSection.description}
               </p>
 

@@ -131,7 +131,7 @@ export default function AboutSection() {
             className="flex flex-col justify-center lg:col-span-6"
           >
             {/* Category / Eyebrow */}
-            <span className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-[#EA580C]">
+            <span className="inline-flex items-center gap-2 font-mono text-[9px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#EA580C]">
               <span className="h-2 w-2 rounded-full bg-[#1E3A8A]" />
               {about.eyebrow}
             </span>
