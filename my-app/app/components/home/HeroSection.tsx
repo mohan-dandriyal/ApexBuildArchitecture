@@ -39,7 +39,7 @@ export default function HeroSection() {
   return (
     <section
       id={hero.sectionId}
-      className="relative flex md:h-screen min-h-[550px] w-full flex-col justify-between overflow-hidden bg-[#0B1120] pt-16 sm:pt-28 pb-5 lg:pt-32 lg:pb-14"
+      className="relative flex md:h-screen min-h-[500px] w-full flex-col justify-between overflow-hidden bg-[#0B1120] pt-18 sm:pt-28 pb-4 lg:pt-32 lg:pb-14 mt-3"
     >
       {/* ================= PRELOADED FULL-SCREEN SMOOTH IMAGE SLIDER ================= */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -88,7 +88,7 @@ export default function HeroSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.55, ease: smoothEase }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/95 px-4 py-1.5 font-mono text-[11px] font-bold tracking-[0.18em] text-[#1E3A8A] shadow-lg">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/95 px-4 py-1.5 font-mono sm:text-[11px] text-[9px] font-bold tracking-[0.18em] text-[#1E3A8A] shadow-lg">
                 <span className="h-2 w-2 rounded-full bg-[#EA580C]" />
                 {slide.tag}
               </span>

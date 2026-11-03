@@ -137,7 +137,7 @@ export default function AboutSection() {
             </span>
 
             {/* Section Main Title */}
-            <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.12] text-[#0B1120] sm:text-4xl lg:text-[46px]">
+            <h2 className="mt-3 font-display text-xl font-[600] sm:font-extrabold leading-[1.12] text-[#0B1120] sm:text-4xl lg:text-[46px]">
               {about.heading.prefix}{" "}
               <span className="font-serif italic font-normal text-[#EA580C]">
                 {about.heading.accent}
