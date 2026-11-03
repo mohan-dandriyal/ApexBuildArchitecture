@@ -58,7 +58,7 @@ export default function ContactSection() {
               <span className="h-2 w-2 rounded-full bg-[#1E3A8A]" />
               {contact.eyebrow}
             </span>
-            <h2 className="mt-2.5 font-display text-4xl font-extrabold leading-[1.06] text-[#0B1120] sm:text-5xl">
+            <h2 className="mt-2.5 font-display text-2xl font-[600] sm:font-extrabold leading-[1.15] text-[#0B1120] sm:text-5xl">
               {contact.heading.prefix}{" "}
               <span className="font-serif italic font-normal text-[#EA580C]">
                 {contact.heading.accent}

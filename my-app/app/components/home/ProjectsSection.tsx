@@ -38,7 +38,7 @@ export default function ProjectsSection() {
               <span className="h-2 w-2 rounded-full bg-[#1E3A8A]" />
               {projects.eyebrow}
             </span>
-            <h2 className="mt-2.5 font-display text-4xl font-extrabold leading-[1.06] text-[#0B1120] sm:text-5xl">
+            <h2 className="mt-2.5 font-display text-2xl font-[600] sm:font-extrabold leading-[1.15] text-[#0B1120] sm:text-5xl">
               {projects.heading.prefix}{" "}
               <span className="font-serif italic font-normal text-[#EA580C]">
                 {projects.heading.accent}
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex overflow-x-auto gap-2">
+          <div className="flex overflow-x-auto gap-2 sm:pb-0 pb-1">
             {projects.categories.map((cat) => {
               const isActive = selectedCategory === cat;
               return (
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                     }
                   </div>
 
-                  <h3 className="mt-1.5 font-display text-xl font-extrabold text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
+                  <h3 className="mt-1.5 font-display text-xl font-[600] sm:font-extrabold text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
                     {project.title}
                   </h3>
 

@@ -32,7 +32,7 @@ export default function WhyChooseUsSection() {
                 {whyChooseUs.eyebrow}
               </span>
             )}
-            <h2 className="mt-2.5 font-display text-4xl font-extrabold tracking-tight text-[#0B1120] sm:text-5xl lg:text-[54px] lg:leading-[1.08]">
+            <h2 className="mt-2.5 font-display text-2xl font-[600] sm:font-extrabold leading-[1.15] tracking-tight text-[#0B1120] sm:text-5xl lg:text-[54px] lg:leading-[1.08]">
               {whyChooseUs.title}
             </h2>
           </div>
@@ -59,7 +59,7 @@ export default function WhyChooseUsSection() {
             >
               {whyChooseUs.leftFeatures.map((item) => (
                 <div key={item.id} className="group">
-                  <h3 className="font-display text-2xl font-extrabold text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
+                  <h3 className="font-display tsm:text-2xl sm:font-extrabold text-xl font-[600] text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
                     {item.title}
                   </h3>
                   <h4 className="mt-1 font-display text-xs font-bold uppercase tracking-wider text-[#EA580C]">
@@ -106,7 +106,7 @@ export default function WhyChooseUsSection() {
             >
               {whyChooseUs.rightFeatures.map((item) => (
                 <div key={item.id} className="group">
-                  <h3 className="font-display text-2xl font-extrabold text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
+                  <h3 className="font-display sm:text-2xl sm:font-extrabold text-xl font-[600] text-[#0B1120] transition-colors group-hover:text-[#1E3A8A]">
                     {item.title}
                   </h3>
                   <h4 className="mt-1 font-display text-xs font-bold uppercase tracking-wider text-[#EA580C]">
