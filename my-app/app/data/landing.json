@@ -400,7 +400,7 @@
       "accent": "Architects",
       "suffix": "& Engineers."
     },
-    "intro": "Licensed P.E. and AIA principals leading every structure.",
+    "intro": "",
     "focusLabel": "Specialty",
     "showMoreLabel": "Show More Members",
     "showLessLabel": "Show Less",
@@ -542,7 +542,7 @@
     },
     "intro": "Everything you need to know about GMP pricing, 5D BIM, and warranties.",
     "supportCard": {
-      "image": "/assets/images/service-5.webp",
+      "image": "/assets/images/faq-1.webp",
       "badge": "48-HOUR FEASIBILITY AUDIT",
       "title": "Talk to a Principal Structural Estimator",
       "description": "Send your schematic plans for a complimentary cost and schedule breakdown.",

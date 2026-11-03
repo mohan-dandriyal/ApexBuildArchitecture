@@ -88,7 +88,6 @@ export default function WhyChooseUsSection() {
                   src={whyChooseUs.centerImage}
                   alt={whyChooseUs.title}
                   fill
-                  priority
                   sizes="(max-width: 1024px) 70vw, 30vw"
                   className="object-cover object-center transition-transform duration-700 hover:scale-105"
                 />

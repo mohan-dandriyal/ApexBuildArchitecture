@@ -63,7 +63,8 @@ export default function HeroSection() {
                 src={item.mainImage}
                 alt={`${item.titlePrefix} ${item.titleAccent}`}
                 fill
-                priority
+                priority={idx === 0}
+                loading={idx === 0 ? "eager" : "lazy"}
                 sizes="100vw"
                 className="object-cover"
               />
