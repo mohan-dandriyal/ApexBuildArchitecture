@@ -53,7 +53,7 @@ export default function TeamSection() {
         </motion.div>
 
         {/* Team Grid: Initial 4 stay permanently fixed; Only extra members animate in/out */}
-        <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {/* First 4 Members: permanently rendered without reloading */}
           {initialMembers.map((member, index) => (
             <motion.div
